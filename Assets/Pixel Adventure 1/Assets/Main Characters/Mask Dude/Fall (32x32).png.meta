@@ -95,7 +95,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+<<<<<<< HEAD:Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Fall (32x32).png.meta
   spritePackingTag: 
+=======
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Fall (32x32)_0: -1846781244278701463
+  mipmapLimitGroupName: 
+>>>>>>> 1500bd9 (JSP):Assets/Assets/Sprites/Ninja Frog/Fall (32x32).png.meta
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
   userData: 
