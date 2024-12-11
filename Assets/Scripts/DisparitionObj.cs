@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class DisparitionObj : MonoBehaviour
 {
-    public int requiredBlocks = 3; // Nombre de blocs requis pour détruire cet objet
+    public int requiredBlocks = 1; // Nombre de blocs requis pour détruire cet objet
     private int currentBlockCount = 0; // Compteur des blocs atteints
 
     // Appelée lorsqu'une collision ou un trigger est détecté
