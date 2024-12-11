@@ -9,6 +9,12 @@ public class Player : MonoBehaviour
     public LayerMask groundLayer;
     public Transform groundCheck;
     float horizontal;
+    SpriteRenderer sr;
+
+    private void Start()
+    {
+        sr = GetComponent<SpriteRenderer>();
+    }
 
     private void FixedUpdate()
     {
@@ -18,6 +24,12 @@ public class Player : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         horizontal = context.ReadValue<Vector2>().x;
+        if (horizontal < 0)
+            sr.flipX = true;
+        else
+        {
+            sr.flipX = false;
+        }
     }
 
     public void Jump(InputAction.CallbackContext context)
