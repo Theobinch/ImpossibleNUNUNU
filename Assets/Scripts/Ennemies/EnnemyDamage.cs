@@ -8,16 +8,12 @@ public class PlayerCollisions : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-<<<<<<< Updated upstream:Assets/Scripts/PlayerCollision.cs
 		if (collision.CompareTag("Spike"))
 		{
 			TakeDamages(1);
 		}
 
-		if (collision.CompareTag("Mob"))
-=======
 		if (collision.CompareTag("Ennemy"))
->>>>>>> Stashed changes:Assets/Scripts/Ennemies/EnnemyDamage.cs
 		{
 			TakeDamages(1);
 		}
