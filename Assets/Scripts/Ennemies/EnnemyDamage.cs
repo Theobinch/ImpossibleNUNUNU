@@ -16,6 +16,7 @@ public class PlayerCollisions : MonoBehaviour
 		if (collision.CompareTag("Ennemy"))
 		{
 			TakeDamages(1);
+			
 		}
 	}
 
