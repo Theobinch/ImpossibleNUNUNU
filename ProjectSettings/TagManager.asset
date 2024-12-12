@@ -5,7 +5,11 @@ TagManager:
   serializedVersion: 3
   tags:
   - Spike
+<<<<<<< Updated upstream
   - Mob
+=======
+  - Ennemy
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -14,7 +18,7 @@ TagManager:
   - Water
   - UI
   - ground
-  - 
+  - Ennemy
   - 
   - 
   - 
@@ -42,6 +46,12 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 2744192223
+    locked: 0
+  - name: Background
+    uniqueID: 1695294091
     locked: 0
   m_RenderingLayers:
   - Default
