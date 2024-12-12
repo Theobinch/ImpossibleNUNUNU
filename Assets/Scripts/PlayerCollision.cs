@@ -7,11 +7,18 @@ public class PlayerCollisions : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.CompareTag("Pique"))
+		if (collision.CompareTag("Spike"))
+		{
+			TakeDamages(1);
+		}
+
+		if (collision.CompareTag("Mob"))
 		{
 			TakeDamages(1);
 		}
 	}
+
+	
 
 	public void TakeDamages(int damage)
 	{

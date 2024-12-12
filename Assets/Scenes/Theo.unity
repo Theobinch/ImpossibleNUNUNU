@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 13647091}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -150,6 +150,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1654969485}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &39677412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 39677413}
+  m_Layer: 0
+  m_Name: PointA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &39677413
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39677412}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.303, y: 0.583, z: -0.020186912}
+  m_LocalScale: {x: 0.14700001, y: 0.0994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &56593169
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,8 +195,8 @@ GameObject:
   - component: {fileID: 56593172}
   - component: {fileID: 56593174}
   m_Layer: 0
-  m_Name: "Cam\xE9l\xE9on 1"
-  m_TagString: Untagged
+  m_Name: Chameleon 1
+  m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -271,7 +302,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -295,7 +326,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56593169}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -350,7 +381,7 @@ GameObject:
   - component: {fileID: 63059869}
   m_Layer: 0
   m_Name: Idle (20)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -512,8 +543,8 @@ GameObject:
   - component: {fileID: 66628014}
   - component: {fileID: 66628016}
   m_Layer: 0
-  m_Name: 'Plante '
-  m_TagString: Untagged
+  m_Name: Plant
+  m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -597,7 +628,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66628011}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -646,7 +677,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -699,7 +730,7 @@ GameObject:
   - component: {fileID: 133569848}
   m_Layer: 0
   m_Name: 'Bat '
-  m_TagString: Untagged
+  m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -805,7 +836,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -884,7 +915,7 @@ GameObject:
   - component: {fileID: 240870138}
   m_Layer: 0
   m_Name: Idle (23)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1232,7 +1263,7 @@ GameObject:
   - component: {fileID: 351019452}
   m_Layer: 0
   m_Name: 'Turtle 2 '
-  m_TagString: Untagged
+  m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1316,7 +1347,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 351019447}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1365,7 +1396,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1579,7 +1610,7 @@ GameObject:
   - component: {fileID: 484503894}
   m_Layer: 0
   m_Name: Idle (8)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1740,8 +1771,8 @@ GameObject:
   - component: {fileID: 485081714}
   - component: {fileID: 485081713}
   m_Layer: 0
-  m_Name: Pique 1
-  m_TagString: Pique
+  m_Name: Spike 1
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2038,7 +2069,7 @@ GameObject:
   - component: {fileID: 505283013}
   m_Layer: 0
   m_Name: Ghost 1
-  m_TagString: Untagged
+  m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2144,7 +2175,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -2168,7 +2199,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505283008}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2222,6 +2253,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2316,7 +2348,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 0.9
+  orthographic size: 0.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2341,7 +2373,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.723, y: 1.098, z: -10}
+  m_LocalPosition: {x: -5.824, y: 1.025, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2359,9 +2391,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9de2b7fce8c82d87a32f6de76178498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1037183092}
-  offset: {x: 0, y: 0, z: -10}
-  smoothSpeed: 0.125
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowDebugText: 0
+  ShowCameraFrustum: 1
+  IgnoreTimeScale: 0
+  WorldUpOverride: {fileID: 0}
+  ChannelMask: -1
+  UpdateMethod: 2
+  BlendUpdateMethod: 1
+  LensModeOverride:
+    Enabled: 0
+    DefaultMode: 2
+  DefaultBlend:
+    Style: 1
+    Time: 2
+    CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CustomBlends: {fileID: 0}
 --- !u!1 &540806221
 GameObject:
   m_ObjectHideFlags: 0
@@ -2376,7 +2437,7 @@ GameObject:
   - component: {fileID: 540806224}
   m_Layer: 0
   m_Name: Idle
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2538,7 +2599,7 @@ GameObject:
   - component: {fileID: 613178558}
   m_Layer: 0
   m_Name: Idle (7)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2699,8 +2760,8 @@ GameObject:
   - component: {fileID: 615317828}
   - component: {fileID: 615317827}
   m_Layer: 0
-  m_Name: Pique 2
-  m_TagString: Pique
+  m_Name: Spike 2
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3108,7 +3169,7 @@ GameObject:
   - component: {fileID: 632374304}
   m_Layer: 0
   m_Name: Idle (33)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3270,7 +3331,7 @@ GameObject:
   - component: {fileID: 663172331}
   m_Layer: 0
   m_Name: Idle (17)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3463,7 +3524,7 @@ GameObject:
   - component: {fileID: 733800295}
   m_Layer: 0
   m_Name: Idle (12)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3625,7 +3686,7 @@ GameObject:
   - component: {fileID: 758871275}
   m_Layer: 0
   m_Name: Idle (3)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3787,7 +3848,7 @@ GameObject:
   - component: {fileID: 867672667}
   m_Layer: 0
   m_Name: Idle (2)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3949,7 +4010,7 @@ GameObject:
   - component: {fileID: 894271647}
   m_Layer: 0
   m_Name: Idle (10)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4111,7 +4172,7 @@ GameObject:
   - component: {fileID: 896252264}
   m_Layer: 0
   m_Name: Idle (16)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4304,8 +4365,8 @@ GameObject:
   - component: {fileID: 953379132}
   - component: {fileID: 953379134}
   m_Layer: 0
-  m_Name: Abeille
-  m_TagString: Untagged
+  m_Name: Bee
+  m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4411,7 +4472,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -4490,8 +4551,8 @@ GameObject:
   - component: {fileID: 980445134}
   - component: {fileID: 980445136}
   m_Layer: 0
-  m_Name: 'Bloc pique '
-  m_TagString: Untagged
+  m_Name: Spike block
+  m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4624,7 +4685,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -4676,7 +4737,7 @@ GameObject:
   - component: {fileID: 983695393}
   m_Layer: 0
   m_Name: Idle (22)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4824,6 +4885,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &994889369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 994889370}
+  m_Layer: 0
+  m_Name: PointB
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &994889370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994889369}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.888, y: 0.583, z: -0.020186912}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1006668430
 GameObject:
   m_ObjectHideFlags: 0
@@ -4838,7 +4930,7 @@ GameObject:
   - component: {fileID: 1006668433}
   m_Layer: 0
   m_Name: Idle (11)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5019,7 +5111,7 @@ Animator:
   m_GameObject: {fileID: 1037183087}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9765a7b47f49c394a91dfcb59c88c3b2, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2370474110db33d4f98cfa06e2e8742e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5122,7 +5214,7 @@ Transform:
   m_GameObject: {fileID: 1037183087}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.559, y: 0.879, z: 0}
+  m_LocalPosition: {x: -5.824, y: 1.025, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5156,13 +5248,13 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: b42d297868b62ec4e8d88c87ce4ada15, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1037183094}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5179,7 +5271,19 @@ MonoBehaviour:
     m_ActionId: 996958bb-d014-4a8d-a2ae-aea975f94720
     m_ActionName: 'Player/Fire[/Mouse/leftButton]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1037183094}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Jump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 702b3905-7224-4974-ac78-3966f242fc4c
     m_ActionName: 'Player/Jump[/Keyboard/space]'
   - m_PersistentCalls:
@@ -5223,7 +5327,7 @@ MonoBehaviour:
     m_ActionId: 500f40a4-d4fa-4e53-b80a-2271d3df8ed1
     m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -5241,7 +5345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1037183089}
   speed: 2
-  jumpingPower: 5
+  jumpingPower: 3.5
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -5256,7 +5360,7 @@ CircleCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 8805fa6e61556a34b9e020332b362d05, type: 2}
+  m_Material: {fileID: 6200000, guid: 731e5315e91b9c94fb5cab1bbc7f37f5, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -5309,7 +5413,7 @@ GameObject:
   - component: {fileID: 1043669969}
   m_Layer: 0
   m_Name: Idle (15)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5533,7 +5637,7 @@ GameObject:
   - component: {fileID: 1131728641}
   m_Layer: 0
   m_Name: Idle (13)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5726,7 +5830,7 @@ GameObject:
   - component: {fileID: 1327404208}
   m_Layer: 0
   m_Name: Idle (28)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5919,7 +6023,7 @@ GameObject:
   - component: {fileID: 1344370120}
   m_Layer: 0
   m_Name: Idle (21)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6081,7 +6185,7 @@ GameObject:
   - component: {fileID: 1345043448}
   m_Layer: 0
   m_Name: Idle (9)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6229,6 +6333,113 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1416314165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1416314168}
+  - component: {fileID: 1416314167}
+  - component: {fileID: 1416314166}
+  m_Layer: 0
+  m_Name: PlayerCam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1416314166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416314165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886251e9a18ece04ea8e61686c173e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraDistance: 10
+  DeadZoneDepth: 0
+  Composition:
+    ScreenPosition: {x: 0, y: 0}
+    DeadZone:
+      Enabled: 0
+      Size: {x: 0.2, y: 0.2}
+    HardLimits:
+      Enabled: 0
+      Size: {x: 0.8, y: 0.8}
+      Offset: {x: 0, y: 0}
+  CenterOnActivate: 1
+  TargetOffset: {x: 0, y: 0, z: 0}
+  Damping: {x: 1, y: 1, z: 1}
+  Lookahead:
+    Enabled: 0
+    Time: 0
+    Smoothing: 0
+    IgnoreY: 0
+--- !u!114 &1416314167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416314165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Priority:
+    Enabled: 0
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 1037183092}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 34
+    OrthographicSize: 0.8
+    NearClipPlane: 0.3
+    FarClipPlane: 1000
+    Dutch: 0
+    ModeOverride: 0
+    PhysicalProperties:
+      GateFit: 2
+      SensorSize: {x: 21.946, y: 16.002}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
+--- !u!4 &1416314168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416314165}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.824, y: 1.025, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1448517782
 GameObject:
   m_ObjectHideFlags: 0
@@ -6242,8 +6453,8 @@ GameObject:
   - component: {fileID: 1448517786}
   - component: {fileID: 1448517785}
   m_Layer: 0
-  m_Name: Pique 5
-  m_TagString: Pique
+  m_Name: Spike 5
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -6590,7 +6801,7 @@ GameObject:
   - component: {fileID: 1457238482}
   m_Layer: 0
   m_Name: Idle (19)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6752,7 +6963,7 @@ GameObject:
   - component: {fileID: 1479630886}
   m_Layer: 0
   m_Name: Idle (24)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6914,7 +7125,7 @@ GameObject:
   - component: {fileID: 1522392607}
   m_Layer: 0
   m_Name: Idle (26)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7076,7 +7287,7 @@ GameObject:
   - component: {fileID: 1564325005}
   m_Layer: 0
   m_Name: Idle (32)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7238,7 +7449,7 @@ GameObject:
   - component: {fileID: 1573556702}
   m_Layer: 0
   m_Name: Idle (14)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7399,8 +7610,8 @@ GameObject:
   - component: {fileID: 1591535614}
   - component: {fileID: 1591535613}
   m_Layer: 0
-  m_Name: Pique 4
-  m_TagString: Pique
+  m_Name: Spike 4
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12371,9 +12582,10 @@ GameObject:
   - component: {fileID: 1654969487}
   - component: {fileID: 1654969486}
   - component: {fileID: 1654969488}
-  m_Layer: 0
+  - component: {fileID: 1654969489}
+  m_Layer: 6
   m_Name: Turtle 1
-  m_TagString: Untagged
+  m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12442,7 +12654,7 @@ Transform:
   m_GameObject: {fileID: 1654969483}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.1802, y: 0.6338, z: 0}
+  m_LocalPosition: {x: -8.0439, y: 0.6412, z: 0}
   m_LocalScale: {x: 0.88, y: 0.88, z: 0.97879}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12479,7 +12691,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -12520,8 +12732,8 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!95 &1654969488
 Animator:
   serializedVersion: 7
@@ -12532,7 +12744,7 @@ Animator:
   m_GameObject: {fileID: 1654969483}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e348c849bbf2c2c4fa9bc454a6a6beb4, type: 2}
+  m_Controller: {fileID: 9100000, guid: a8f756f48dbdb0b48b4e3019e560d991, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -12544,6 +12756,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1654969489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654969483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 656c7aed974dce145a673f6e48c3e2b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointA: {fileID: 39677412}
+  pointB: {fileID: 994889369}
+  speed: 2
 --- !u!1 &1664170772
 GameObject:
   m_ObjectHideFlags: 0
@@ -12558,7 +12785,7 @@ GameObject:
   - component: {fileID: 1664170775}
   m_Layer: 0
   m_Name: Idle (25)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12720,7 +12947,7 @@ GameObject:
   - component: {fileID: 1765485608}
   m_Layer: 0
   m_Name: Idle (30)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12881,8 +13108,8 @@ GameObject:
   - component: {fileID: 1777628827}
   - component: {fileID: 1777628826}
   m_Layer: 0
-  m_Name: Pique 3
-  m_TagString: Pique
+  m_Name: Spike 3
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13044,8 +13271,8 @@ GameObject:
   - component: {fileID: 1791071893}
   - component: {fileID: 1791071895}
   m_Layer: 0
-  m_Name: "Cam\xE9l\xE9on 2"
-  m_TagString: Untagged
+  m_Name: Chameleon 2
+  m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13151,7 +13378,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -13175,7 +13402,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791071890}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -13230,7 +13457,7 @@ GameObject:
   - component: {fileID: 1792511338}
   m_Layer: 0
   m_Name: Idle (27)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13392,7 +13619,7 @@ GameObject:
   - component: {fileID: 1796510904}
   m_Layer: 0
   m_Name: Idle (4)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13630,7 +13857,7 @@ GameObject:
   - component: {fileID: 1885706630}
   m_Layer: 0
   m_Name: Idle (5)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13823,7 +14050,7 @@ GameObject:
   - component: {fileID: 1995045767}
   m_Layer: 0
   m_Name: Idle (29)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13985,7 +14212,7 @@ GameObject:
   - component: {fileID: 2001360088}
   m_Layer: 0
   m_Name: Idle (31)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14309,7 +14536,7 @@ GameObject:
   - component: {fileID: 2085878269}
   m_Layer: 0
   m_Name: Idle (18)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14471,7 +14698,7 @@ GameObject:
   - component: {fileID: 2107404761}
   m_Layer: 0
   m_Name: Idle (6)
-  m_TagString: Pique
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14657,11 +14884,6 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 1830932070}
-  - {fileID: 485081712}
-  - {fileID: 615317826}
-  - {fileID: 1777628825}
-  - {fileID: 1591535612}
-  - {fileID: 1448517784}
   - {fileID: 1654969485}
   - {fileID: 351019449}
   - {fileID: 497335042}
@@ -14676,6 +14898,11 @@ SceneRoots:
   - {fileID: 282993774}
   - {fileID: 505283010}
   - {fileID: 66628013}
+  - {fileID: 485081712}
+  - {fileID: 615317826}
+  - {fileID: 1777628825}
+  - {fileID: 1591535612}
+  - {fileID: 1448517784}
   - {fileID: 540806223}
   - {fileID: 867672666}
   - {fileID: 758871274}
@@ -14711,3 +14938,6 @@ SceneRoots:
   - {fileID: 632374307}
   - {fileID: 980445133}
   - {fileID: 1037183092}
+  - {fileID: 1416314168}
+  - {fileID: 39677413}
+  - {fileID: 994889370}
