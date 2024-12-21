@@ -15,6 +15,7 @@ public class MoveTurtle : MonoBehaviour
         anim = GetComponent<Animator>();
         currentPoint = pointB.transform;
 
+        // Démarrage de l'animation de mouvement
         if (anim != null)
         {
             anim.SetBool("IsRunning", true);
@@ -34,8 +35,8 @@ public class MoveTurtle : MonoBehaviour
         // Appliquer la vitesse au Rigidbody
         rb.linearVelocity = new Vector2(direction.x * speed, rb.linearVelocity.y);
 
-        // Vérifier si le monstre a atteint le point cible
-        if (Vector2.Distance(transform.position, currentPoint.position) < 0.2f)
+        // Vérifier si la tortue a atteint le point cible
+        if (Vector2.Distance(transform.position, currentPoint.position) < 0.3f)
         {
             // Changer la direction et le point cible
             currentPoint = currentPoint == pointB.transform ? pointA.transform : pointB.transform;
@@ -51,6 +52,19 @@ public class MoveTurtle : MonoBehaviour
         transform.localScale = localScale;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            // Récupère le script PlayerCollisions et applique les dégâts
+            PlayerCollisions playerCollisions = collision.GetComponent<PlayerCollisions>();
+            if (playerCollisions != null)
+            {
+                playerCollisions.TakeDamages(1);
+            }
+        }
+    }
+
     private void OnDrawGizmos()
     {
         // Dessiner les points A et B dans l'éditeur
@@ -62,4 +76,3 @@ public class MoveTurtle : MonoBehaviour
         }
     }
 }
-
