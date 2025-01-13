@@ -3,12 +3,34 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCollisions : MonoBehaviour
 {
-    public int life = 1;
-    private bool isDead = false;
+    public int life = 1; // Points de vie du joueur
+    private bool isDead = false; // Indique si le joueur est mort
+    private Animator anim; // Animator pour gérer les animations du joueur
+
+    [Header("Player Settings")]
+    public GameObject Player; // Assignez ce GameObject dans l'Inspector
+
+    private void Awake()
+    {
+        // Récupérer l'Animator depuis le GameObject Player
+        if (Player != null)
+        {
+            anim = Player.GetComponent<Animator>();
+            if (anim == null)
+            {
+                Debug.LogError("Animator component is missing on the Player GameObject.");
+            }
+        }
+        else
+        {
+            Debug.LogError("Player GameObject is not assigned in the Inspector.");
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        // Détecte si le joueur entre en collision avec un objet portant le tag "Player"
+        if (collision.CompareTag("Player"))
         {
             TakeDamages(1);
         }
@@ -16,6 +38,7 @@ public class PlayerCollisions : MonoBehaviour
 
     public void TakeDamages(int damage)
     {
+        // Réduit la vie du joueur et vérifie si elle atteint zéro
         life -= damage;
 
         if (life <= 0 && !isDead)
@@ -28,11 +51,19 @@ public class PlayerCollisions : MonoBehaviour
     {
         isDead = true;
 
-        // Optionnel : Ajouter un effet visuel de mort ici
-        GetComponent<Rigidbody2D>().AddForce(Vector3.up * 150);
-        GetComponent<Collider2D>().isTrigger = true;
+        // Déclenche l'animation de mort si l'Animator est présent
+        if (anim != null)
+        {
+            anim.SetTrigger("PlayerDie");
+            Debug.Log("PlayerDie trigger activated.");
+        }
+        else
+        {
+            Debug.LogWarning("Animator component is missing on the Player GameObject.");
+        }
 
-        Invoke("RestartLevel", 0); // Laisse un délai avant de redémarrer le niveau
+        // Redémarre le niveau après un délai
+        Invoke("RestartLevel", 1f);
     }
 
     public void RestartLevel()
