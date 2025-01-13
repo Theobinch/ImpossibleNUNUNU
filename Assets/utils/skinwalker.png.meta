@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skinwalker_0: -8145943713987681758
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

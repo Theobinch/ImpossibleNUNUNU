@@ -8,7 +8,7 @@ public class PlayerCollisions : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Spike") || collision.CompareTag("Ennemy"))
+        if (collision.tag == "Player")
         {
             TakeDamages(1);
         }
