@@ -5,9 +5,24 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/Th\xE9o 1.unity"
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 0
+    path: Assets/Scenes/MainMenu.unity
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Levels/MainMenu.unity
+    guid: cc6e483eda18e8644aef717d181cd131
+  - enabled: 1
+    path: Assets/Levels/Axel.unity
+    guid: d50a08599b91dae43b3118ff92cacf83
+  - enabled: 1
+    path: Assets/Levels/Test.unity
+    guid: 6cdc5ce484614264d8fac7e77ba81fa4
+  - enabled: 1
+    path: Assets/Levels/Theo.unity
+    guid: fbebe2996b4cc00429f0cff08c0af59d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
