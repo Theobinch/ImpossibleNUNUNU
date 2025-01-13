@@ -1,15 +1,15 @@
 using UnityEngine;
 using System.Collections;
+
 public class Firetrap : MonoBehaviour
 {
     [Header("Firetrap Timers")]
-    [SerializeField] private float damage;
-    [SerializeField] private float activationDelay;
-    [SerializeField] private float activeTime;
+    [SerializeField] private float activationDelay; // Temps avant l'activation
+    [SerializeField] private float activeTime; // Durée pendant laquelle le piège est actif
     private Animator anim;
     private SpriteRenderer spriteRend;
-    private bool triggered; // when the trap get triggered
-    private bool active; // when the trap is active and can hurt the player
+    private bool triggered; // Si le piège a été déclenché
+    private bool active; // Si le piège est actif et peut tuer le joueur
 
     private void Awake()
     {
@@ -19,26 +19,35 @@ public class Firetrap : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             if (!triggered)
                 StartCoroutine(ActivateFiretrap());
-            
 
-           // if (active)
-             //    collision.GetComponent<Health>().TakeDamage(damage);
-            
+            // Si le piège est actif, tuer le joueur en utilisant EnemyDamage
+            if (active)
+            {
+             
+                // die
+                
+            }
         }
     }
 
     private IEnumerator ActivateFiretrap()
     {
         triggered = true;
+
+        // Animation ou délai avant l'activation
         yield return new WaitForSeconds(activationDelay);
+
         active = true;
+
+        // Animation ou actions pendant que le piège est actif
         yield return new WaitForSeconds(activeTime);
+
+        // Désactiver le piège
         active = false;
         triggered = false;
     }
-
 }
