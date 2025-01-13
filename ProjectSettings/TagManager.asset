@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ennemy
   - Spike
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -42,6 +43,18 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3953674933
+    locked: 0
+  - name: Foreground
+    uniqueID: 3173143203
+    locked: 0
+  - name: Player
+    uniqueID: 3585511989
+    locked: 0
+  - name: Ground
+    uniqueID: 3182428871
     locked: 0
   m_RenderingLayers:
   - Default
