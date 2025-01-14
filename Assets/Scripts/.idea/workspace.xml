@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../utils/DePixelBreit SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../utils/DePixelBreit SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnnemyProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnnemyProjectile.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +62,7 @@
       <workItem from="1736843346347" duration="10653000" />
       <workItem from="1736860886538" duration="2371000" />
       <workItem from="1736864357854" duration="68000" />
+      <workItem from="1736860886538" duration="3421000" />
     </task>
     <servers />
   </component>
