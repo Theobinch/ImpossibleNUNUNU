@@ -16,7 +16,7 @@ public class PlayerCollisions : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         // Détecte si le joueur entre en collision avec un objet portant le tag "Enemy"
         if (collision.CompareTag("Ennemy")) // Assurez-vous d'utiliser le bon tag

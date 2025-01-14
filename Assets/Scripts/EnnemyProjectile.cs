@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnnemyProjectile : MonoBehaviour // Enlevez l'héritage de PlayerCollisions
+public class EnnemyProjectile : PlayerCollisions
 {
     [SerializeField] private float speed;
     [SerializeField] private float resetTime;
@@ -23,7 +23,6 @@ public class EnnemyProjectile : MonoBehaviour // Enlevez l'héritage de PlayerCo
         gameObject.SetActive(true);
         coll.enabled = true;
     }
-
     private void Update()
     {
         if (hit) return;
@@ -35,17 +34,17 @@ public class EnnemyProjectile : MonoBehaviour // Enlevez l'héritage de PlayerCo
             gameObject.SetActive(false);
     }
 
-    // Gestion des collisions dans EnnemyProjectile
     private void OnTriggerEnter2D(Collider2D collision)
     {
         hit = true;
-        // Gestion des dégâts ou autres interactions ici si nécessaire
-
+        base.OnTriggerEnter2D(collision); //Execute logic from parent script first
         coll.enabled = false;
-        
-        gameObject.SetActive(false); // When this hits any object, deactivate arrow
-    }
 
+        if (anim != null)
+            anim.SetTrigger("explode"); //When the object is a fireball explode it
+        else
+            gameObject.SetActive(false); //When this hits any object deactivate arrow
+    }
     private void Deactivate()
     {
         gameObject.SetActive(false);
