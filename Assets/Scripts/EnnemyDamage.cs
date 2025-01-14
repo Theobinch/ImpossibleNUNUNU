@@ -5,32 +5,22 @@ public class PlayerCollisions : MonoBehaviour
 {
     public int life = 1; // Points de vie du joueur
     private bool isDead = false; // Indique si le joueur est mort
-    private Animator anim; // Animator pour gérer les animations du joueur
-
-    [Header("Player Settings")]
-    public GameObject Player; // Assignez ce GameObject dans l'Inspector
+    private Rigidbody2D rb; // Référence au Rigidbody2D du joueur
 
     private void Awake()
     {
-        // Récupérer l'Animator depuis le GameObject Player
-        if (Player != null)
+        // Récupère le composant Rigidbody2D sur ce GameObject
+        rb = GetComponent<Rigidbody2D>();
+        if (rb == null)
         {
-            anim = Player.GetComponent<Animator>();
-            if (anim == null)
-            {
-                Debug.LogError("Animator component is missing on the Player GameObject.");
-            }
-        }
-        else
-        {
-            Debug.LogError("Player GameObject is not assigned in the Inspector.");
+            Debug.LogError("Rigidbody2D component is missing on the Player GameObject.");
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Détecte si le joueur entre en collision avec un objet portant le tag "Player"
-        if (collision.CompareTag("Player"))
+        // Détecte si le joueur entre en collision avec un objet portant le tag "Enemy"
+        if (collision.CompareTag("Ennemy")) // Assurez-vous d'utiliser le bon tag
         {
             TakeDamages(1);
         }
@@ -51,15 +41,16 @@ public class PlayerCollisions : MonoBehaviour
     {
         isDead = true;
 
-        // Déclenche l'animation de mort si l'Animator est présent
-        if (anim != null)
+        // Désactiver tout mouvement du joueur
+        if (rb != null)
         {
-            anim.SetTrigger("PlayerDie");
-            Debug.Log("PlayerDie trigger activated.");
-        }
-        else
-        {
-            Debug.LogWarning("Animator component is missing on the Player GameObject.");
+            rb.linearVelocity = Vector2.zero; // Stopper tout mouvement
+            rb.gravityScale = 2f; // Assure que la gravité agit normalement
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX; // Bloque le mouvement horizontal
+
+            // Ajoute un saut vertical
+            rb.linearVelocity = new Vector2(0, 6f); // Définit une vitesse verticale pour le saut
+            Debug.Log("Player performed a death jump.");
         }
 
         // Redémarre le niveau après un délai
