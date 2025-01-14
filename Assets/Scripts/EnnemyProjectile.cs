@@ -27,7 +27,7 @@ public class EnnemyProjectile : PlayerCollisions
     {
         if (hit) return;
         float movementSpeed = speed * Time.deltaTime;
-        transform.Translate(movementSpeed, 0, 0);
+        transform.Translate(new Vector3(-movementSpeed, 0, 0));
 
         lifetime += Time.deltaTime;
         if (lifetime > resetTime)

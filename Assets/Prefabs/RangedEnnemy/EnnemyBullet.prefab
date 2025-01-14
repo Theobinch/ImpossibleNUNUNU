@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1
-  speed: 5
+  speed: 10
   resetTime: 5
 --- !u!50 &7706569111752545994
 Rigidbody2D:
