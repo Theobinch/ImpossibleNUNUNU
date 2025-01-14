@@ -6,15 +6,14 @@ public class PlayerCollisions : MonoBehaviour
     public int life = 1; // Points de vie du joueur
     private bool isDead = false; // Indique si le joueur est mort
     private Rigidbody2D rb; // Référence au Rigidbody2D du joueur
+    private Collider2D playerCollider;
 
     private void Awake()
     {
-        // Récupère le composant Rigidbody2D sur ce GameObject
+
         rb = GetComponent<Rigidbody2D>();
-        if (rb == null)
-        {
-            Debug.LogError("Rigidbody2D component is missing on the Player GameObject.");
-        }
+        playerCollider = GetComponent<Collider2D>();
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -50,7 +49,7 @@ public class PlayerCollisions : MonoBehaviour
 
             // Ajoute un saut vertical
             rb.linearVelocity = new Vector2(0, 6f); // Définit une vitesse verticale pour le saut
-            Debug.Log("Player performed a death jump.");
+            playerCollider.enabled = false;
         }
 
         // Redémarre le niveau après un délai
