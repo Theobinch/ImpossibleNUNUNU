@@ -2,20 +2,21 @@ using UnityEngine;
 
 public class LeftKey : MonoBehaviour
 {
-    public AudioSource audioSource; // Référence au composant AudioSource
-    public AudioClip shortPressClip; // Son pour une pression courte
-    public AudioClip longPressClip;  // Son pour une pression longue
+    public AudioSource audioSource; 
+    public AudioClip shortPressClip; 
+    public AudioClip longPressClip;  
 
-    private float pressTime = 0f;    // Temps écoulé depuis que la touche est pressée
-    private bool isLongPressPlayed = false; // Indicateur pour éviter de rejouer le son long
+    private float pressTime = 0f;   
+    private bool isLongPressPlayed = false; 
 
     void Update()
     {
-
+        // Vérifier si touche Q ou flèche gauche pressée
         if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow))
         {
             pressTime += Time.deltaTime;
-            
+
+            // Jouer son long après 0.6 secondes
             if (pressTime >= 0.6f && !isLongPressPlayed)
             {
                 PlayLongPressSound();
@@ -24,7 +25,7 @@ public class LeftKey : MonoBehaviour
         }
         else
         {
-
+     
             if (pressTime > 0f && pressTime < 2f)
             {
                 PlayShortPressSound();
