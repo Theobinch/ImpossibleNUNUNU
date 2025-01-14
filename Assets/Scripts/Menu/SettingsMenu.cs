@@ -65,9 +65,6 @@ public class SettingsMenu : MonoBehaviour
     {
         Resolution resolution = filteredResolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, true);
-        
-        // Afficher la nouvelle résolution dans la console
-        Debug.Log($"Résolution changée à : {resolution.width}x{resolution.height}");
     }
 
     public void SetMusicVolume(float sliderValue)
