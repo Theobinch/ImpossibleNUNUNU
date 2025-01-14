@@ -5548,6 +5548,63 @@ MonoBehaviour:
     CameraRadius: 0.2
     DampingIntoCollision: 0
     DampingFromCollision: 0.5
+--- !u!1001 &1782395622
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3916005788793582704, guid: f74ed47259bb420419a68a9a7d287d64, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.789558
+      objectReference: {fileID: 0}
+    - target: {fileID: 3916005788793582704, guid: f74ed47259bb420419a68a9a7d287d64, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5517054
+      objectReference: {fileID: 0}
+    - target: {fileID: 3916005788793582704, guid: f74ed47259bb420419a68a9a7d287d64, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.9561051
+      objectReference: {fileID: 0}
+    - target: {fileID: 3916005788793582704, guid: f74ed47259bb420419a68a9a7d287d64, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3916005788793582704, guid: f74ed47259bb420419a68a9a7d287d64, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3916005788793582704, guid: f74ed47259bb420419a68a9a7d287d64, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3916005788793582704, guid: f74ed47259bb420419a68a9a7d287d64, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3916005788793582704, guid: f74ed47259bb420419a68a9a7d287d64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3916005788793582704, guid: f74ed47259bb420419a68a9a7d287d64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3916005788793582704, guid: f74ed47259bb420419a68a9a7d287d64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780537112716046409, guid: f74ed47259bb420419a68a9a7d287d64, type: 3}
+      propertyPath: m_Name
+      value: Strauss
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f74ed47259bb420419a68a9a7d287d64, type: 3}
 --- !u!114 &1843573699 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4364587554762643798, guid: 1b328b8f616ba3e4ea2284001b14fdf8, type: 3}
@@ -6271,3 +6328,4 @@ SceneRoots:
   - {fileID: 1705872597}
   - {fileID: 255058652}
   - {fileID: 1366160303}
+  - {fileID: 1782395622}
