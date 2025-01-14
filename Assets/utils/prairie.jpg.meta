@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      prairie_0: 3129819079504582625
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
