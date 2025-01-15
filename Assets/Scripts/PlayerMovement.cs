@@ -1,52 +1,87 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float speed;       // Vitesse horizontale
-    [SerializeField] private float jumpForce;   // Force du saut
+    [Header ("Movement Parameters")]
+    [SerializeField] private float speed;
+    [SerializeField] private float jumpPower;
+
+    [Header("Layers")]
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask wallLayer;
+
+    [Header("Sounds")]
+    [SerializeField] private AudioClip jumpSound;
+
     private Rigidbody2D body;
     private Animator anim;
-    private bool IsGrounded;
+    private BoxCollider2D boxCollider;
+    private float wallJumpCooldown;
+    private float horizontalInput;
 
     private void Awake()
     {
-        // Récupérer les composants nécessaires
+        //Grab references for rigidbody and animator from object
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
+        horizontalInput = Input.GetAxis("Horizontal");
+        body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.linearVelocity.y);
 
-        // Mouvement horizontal
-        body.linearVelocity = new Vector2(horizontalInput * speed, body.linearVelocity.y);
-
-        // Inverser le personnage lorsqu'il se déplace à gauche/droite
+        //Flip player when moving left-right
         if (horizontalInput > 0.01f)
             transform.localScale = Vector3.one;
         else if (horizontalInput < -0.01f)
             transform.localScale = new Vector3(-1, 1, 1);
 
-        // Gestion du saut
-        if(Input.GetKeyDown(KeyCode.Space))
+        //Set animator parameters
+        anim.SetBool("PlayerRun", horizontalInput != 0);
+        anim.SetBool("IsGrounded", isGrounded());
+        
+        //Jump
+        if (Input.GetKeyDown(KeyCode.Space))
             Jump();
+        
     }
 
     private void Jump()
     {
-        // Appliquer une force vers le haut pour le saut
-        body.linearVelocity = new Vector2(body.linearVelocity.x, jumpForce);
-        anim.SetTrigger("PlayerJump");
-        IsGrounded = false;
+        if (isGrounded())
+        {
+            body.linearVelocity = new Vector2(body.linearVelocity.x, jumpPower);
+            anim.SetTrigger("PlayerJump");
+        }
+        else if (onWall() && !isGrounded())
+        {
+            if (horizontalInput == 0)
+            {
+                body.linearVelocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 10, 0);
+                transform.localScale = new Vector3(-Mathf.Sign(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+            else
+                body.linearVelocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 3, 6);
+
+            wallJumpCooldown = 0;
+        }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private bool isGrounded()
     {
-        // Vérifier si le joueur touche le sol
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            IsGrounded = true;
-        }
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
+        return raycastHit.collider != null;
+    }
+    private bool onWall()
+    {
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, wallLayer);
+        return raycastHit.collider != null;
+    }
+    public bool canAttack()
+    {
+        return horizontalInput == 0 && isGrounded() && !onWall();
     }
 }
