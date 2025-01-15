@@ -8,11 +8,20 @@ public class PlayerCollisions : MonoBehaviour
     private Rigidbody2D rb; // Référence au Rigidbody2D du joueur
     private Collider2D playerCollider;
     public string Game_Over = "GameOverScene"; // Nom de la scène Game Over
+    [SerializeField] public float fallLimit;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
+    }
+    
+    private void Update()
+    {
+        if (transform.position.y < fallLimit && !isDead)
+        {
+            Die();
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
