@@ -25,7 +25,6 @@ public class LeftKey : MonoBehaviour
         }
         else
         {
-     
             if (pressTime > 0f && pressTime < 2f)
             {
                 PlayShortPressSound();
@@ -36,19 +35,24 @@ public class LeftKey : MonoBehaviour
         }
     }
 
+    void PlaySound(AudioClip clip)
+    {
+        // Utiliser la méthode correcte pour vérifier l'activation des sons des touches
+        if (clip != null && audioSource != null && AudioSettingsManager.Instance.AreKeySoundsEnabled)
+        {
+            audioSource.PlayOneShot(clip);
+        }
+    }
+
     void PlayShortPressSound()
     {
-        if (shortPressClip != null && audioSource != null)
-        {
-            audioSource.PlayOneShot(shortPressClip);
-        }
+        // Utiliser la fonction générique pour jouer un son
+        PlaySound(shortPressClip);
     }
 
     void PlayLongPressSound()
     {
-        if (longPressClip != null && audioSource != null)
-        {
-            audioSource.PlayOneShot(longPressClip);
-        }
+        // Utiliser la fonction générique pour jouer un son
+        PlaySound(longPressClip);
     }
 }

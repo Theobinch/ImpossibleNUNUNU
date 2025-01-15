@@ -1,17 +1,21 @@
 using UnityEngine;
 
-public class JumpKey : MonoBehaviour
+public class SKey : MonoBehaviour
 {
     public AudioSource audioSource; // Référence au composant AudioSource
     public AudioClip keyPressClip;  // Le clip sonore à jouer
-    public KeyCode keyToDetect = KeyCode.Space; // Touche spécifique à détecter (par défaut : barre d'espace)
+    public KeyCode keyToDetect = KeyCode.S; // Touche spécifique à détecter (par défaut : touche S)
 
     void Update()
     {
         // Vérifier si la touche spécifique est pressée
         if (Input.GetKeyDown(keyToDetect))
         {
-            PlayKeyPressSound();
+            // Vérifier si les sons sont activés avant de jouer le son
+            if (AudioSettingsManager.Instance.AreKeySoundsEnabled)
+            {
+                PlayKeyPressSound();
+            }
         }
     }
 
