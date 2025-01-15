@@ -7,29 +7,30 @@ using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
-    public AudioMixer audioMixer; 
-    public Slider musicSlider;
-    
-    [SerializeField] private TMP_Dropdown resolutionDropdown;
-    
-    private Resolution[] resolutions;
-    private List<Resolution> filteredResolutions;
+    public AudioMixer audioMixer; // Gestionnaire des volumes
+    public Slider musicSlider; // Slider pour régler le volume de la musique
 
-    private float currentRefreshRate;
-    private int currentResolutionIndex = 0;
+    [SerializeField] private TMP_Dropdown resolutionDropdown; // Dropdown pour les résolutions
+    [SerializeField] private Toggle keySoundsToggle; // Toggle pour activer/désactiver les sons des touches
+
+    private Resolution[] resolutions; // Toutes les résolutions disponibles
+    private List<Resolution> filteredResolutions; // Résolutions filtrées par le taux de rafraîchissement actuel
+
+    private float currentRefreshRate; // Taux de rafraîchissement actuel
+    private int currentResolutionIndex = 0; // Index de la résolution actuelle
 
     void Start()
     {
         // Initialisation des résolutions disponibles et des options
         resolutions = Screen.resolutions;
         filteredResolutions = new List<Resolution>();
-        
+
         resolutionDropdown.ClearOptions();
         currentRefreshRate = Screen.currentResolution.refreshRate;
 
-        for (int i = 0; i < resolutions.Length; i++)  // Correction de 'length' en 'Length'
+        for (int i = 0; i < resolutions.Length; i++)
         {
-            if (resolutions[i].refreshRate == currentRefreshRate)  // Correction de 'cuurerRefreshRate' en 'currentRefreshRate'
+            if (resolutions[i].refreshRate == currentRefreshRate)
             {
                 filteredResolutions.Add(resolutions[i]);
             }
@@ -46,8 +47,8 @@ public class SettingsMenu : MonoBehaviour
                 currentResolutionIndex = i;
             }
         }
-        
-        resolutionDropdown.AddOptions(options); 
+
+        resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
 
@@ -57,8 +58,14 @@ public class SettingsMenu : MonoBehaviour
         {
             musicSlider.value = Mathf.Pow(10, currentVolume / 20);
         }
-        
+
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
+
+        // Initialiser l'état du Toggle
+        keySoundsToggle.isOn = AudioSettingsManager.Instance.AreKeySoundsEnabled;
+
+        // Ajouter un listener pour surveiller les changements du Toggle
+        keySoundsToggle.onValueChanged.AddListener(OnKeySoundsToggleChanged);
     }
 
     public void SetResolution(int resolutionIndex)
@@ -71,5 +78,11 @@ public class SettingsMenu : MonoBehaviour
     {
         float dbVolume = Mathf.Log10(Mathf.Clamp(sliderValue, 0.0001f, 1f)) * 20;
         audioMixer.SetFloat("MusicVolume", dbVolume);
+    }
+
+    private void OnKeySoundsToggleChanged(bool isEnabled)
+    {
+        // Mettre à jour l'état global des sons des touches
+        AudioSettingsManager.Instance.AreKeySoundsEnabled = isEnabled;
     }
 }
