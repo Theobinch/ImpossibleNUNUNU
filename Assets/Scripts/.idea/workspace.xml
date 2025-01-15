@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fdd7a790-a35c-4943-93d6-7e502bfb7a19" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../Levels/GameOver.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Levels/GameOver.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Levels/Test_RangedEnnemy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Levels/Test_RangedEnnemy.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../utils/DePixelBreit SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../utils/DePixelBreit SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../utils/GJswsurWgAAuwn6.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../utils/GJswsurWgAAuwn6.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../utils/seth-rogen-dog-epic-among-us-compilation-removebg-preview.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../utils/seth-rogen-dog-epic-among-us-compilation-removebg-preview.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Levels/Level01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Levels/Level01.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ennemies/Folder.DotSettings.user.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +32,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Ennemies/MoveTurtle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ennemies/RangedEnnemy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnnemyDamage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnnemyDamage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnnemyProjectile.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameOverScreen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
@@ -90,6 +86,7 @@
       <workItem from="1736931101642" duration="4343000" />
       <workItem from="1736936512582" duration="4143000" />
       <workItem from="1736946436225" duration="1091000" />
+      <workItem from="1736954164820" duration="36000" />
     </task>
     <servers />
   </component>
