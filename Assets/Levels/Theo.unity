@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed0f14d9903d5644fb5dfaf3169acfcd, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   audioSource: {fileID: 255058651}
   keyPressClip: {fileID: 8300000, guid: 8f1a36a3a9ff40a4f8fb382a2f3d9edc, type: 3}
   keyToDetect: 32
@@ -5681,11 +5681,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e1f674d0c2f3b4479cc21f8f726c5fc, type: 3}
---- !u!82 &3064625252342818308 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2986704072986237526, guid: 3e1f674d0c2f3b4479cc21f8f726c5fc, type: 3}
-  m_PrefabInstance: {fileID: 3064625252342818307}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3110259543016020489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5896,6 +5891,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2090691713436968622, guid: 7ee3d4cc16ae8c543a592b5695a264b3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090691713436968622, guid: 7ee3d4cc16ae8c543a592b5695a264b3, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5728168273566611207, guid: 7ee3d4cc16ae8c543a592b5695a264b3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.18
@@ -6032,12 +6035,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31d260ef53a89b94dbe64deafbedcf94, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  audioSource: {fileID: 3064625252342818308}
-  keySounds: []
-  pressTimes: []
-  longPressPlayed: []
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6145943780392631837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6202,8 +6201,4 @@ SceneRoots:
   - {fileID: 3064625252342818307}
   - {fileID: 220328821185947128}
   - {fileID: 6144183700915958590}
-  - {fileID: 1240771242}
-  - {fileID: 1705872597}
   - {fileID: 255058652}
-  - {fileID: 1366160303}
-  - {fileID: 1782395622}
