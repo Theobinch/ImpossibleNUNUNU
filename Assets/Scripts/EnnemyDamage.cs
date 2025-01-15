@@ -7,13 +7,12 @@ public class PlayerCollisions : MonoBehaviour
     private bool isDead = false; // Indique si le joueur est mort
     private Rigidbody2D rb; // Référence au Rigidbody2D du joueur
     private Collider2D playerCollider;
+    public string Game_Over = "GameOverScene"; // Nom de la scène Game Over
 
     private void Awake()
     {
-
         rb = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
-
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -52,12 +51,18 @@ public class PlayerCollisions : MonoBehaviour
             playerCollider.enabled = false;
         }
 
-        // Redémarre le niveau après un délai
-        Invoke("RestartLevel", 1f);
+        GameOver(); // Appelle la méthode pour changer de scène
+    }
+
+    public void GameOver()
+    {
+        // Chargement de la scène Game Over
+
+        SceneManager.LoadScene(Game_Over);
     }
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Recharge la scène actuelle
     }
 }
