@@ -60,7 +60,7 @@ public class PlayerCollisions : MonoBehaviour
             playerCollider.enabled = false;
         }
 
-        GameOver(); // Appelle la méthode pour changer de scène
+        Invoke(nameof(GameOver), 1);
     }
 
     public void GameOver()
