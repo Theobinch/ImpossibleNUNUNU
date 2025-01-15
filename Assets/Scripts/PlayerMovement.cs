@@ -29,14 +29,8 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
 
         // Gestion du saut
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded)
-        {
+        if(Input.GetKeyDown(KeyCode.Space))
             Jump();
-        }
-
-        // Mise à jour des paramètres de l'Animator
-        anim.SetBool("PlayerRun", horizontalInput != 0);
-        anim.SetBool("IsGrounded", IsGrounded);
     }
 
     private void Jump()

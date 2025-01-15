@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdd7a790-a35c-4943-93d6-7e502bfb7a19" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Ennemies/Folder.DotSettings.user.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Levels/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Levels/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Levels/Test.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Levels/Theo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Levels/Theo.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,12 +20,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;NaKyoo&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Theobinch/ImpossibleNUNUNU.git&quot;,
+    &quot;accountId&quot;: &quot;eaf30611-8cd6-48bd-8b68-227f063cb756&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/KeyTouchSound.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ennemies/MoveTurtle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ennemies/RangedEnnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnnemyDamage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnnemyProjectile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -47,8 +64,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.222" />
       </set>
     </attachedChunks>
   </component>
