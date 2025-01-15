@@ -4861,6 +4861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1
+  Game_Over: GameOverScene
 --- !u!114 &814774617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6015,28 +6016,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9059908143342862259, guid: 57533ef8c7ce7a142a166b25493c0f11, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6144183700915958592}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57533ef8c7ce7a142a166b25493c0f11, type: 3}
---- !u!1 &6144183700915958591 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9059908143342862259, guid: 57533ef8c7ce7a142a166b25493c0f11, type: 3}
-  m_PrefabInstance: {fileID: 6144183700915958590}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6144183700915958592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6144183700915958591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31d260ef53a89b94dbe64deafbedcf94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &6145943780392631837
 PrefabInstance:
   m_ObjectHideFlags: 0

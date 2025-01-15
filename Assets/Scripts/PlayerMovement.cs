@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D body;
     private Animator anim;
-    private BoxCollider2D boxCollider;
+    private CircleCollider2D boxCollider;
     private float horizontalInput;
     private bool isJumping; // Empêche les sauts multiples et la modification du saut en vol
     private bool hasJumped; // Assure qu'on ne saute qu'une seule fois par pression de la touche
@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
         // Grab references for Rigidbody and Animator from the object
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        boxCollider = GetComponent<BoxCollider2D>();
+        boxCollider = GetComponent<CircleCollider2D>();
     }
 
     private void Update()
