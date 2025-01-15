@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fdd7a790-a35c-4943-93d6-7e502bfb7a19" name="Changes" comment="" />
+    <list default="true" id="fdd7a790-a35c-4943-93d6-7e502bfb7a19" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Levels/GameOver.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Levels/GameOver.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Levels/Test_RangedEnnemy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Levels/Test_RangedEnnemy.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../utils/DePixelBreit SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../utils/DePixelBreit SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../utils/GJswsurWgAAuwn6.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../utils/GJswsurWgAAuwn6.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../utils/seth-rogen-dog-epic-among-us-compilation-removebg-preview.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../utils/seth-rogen-dog-epic-among-us-compilation-removebg-preview.png.meta" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +38,9 @@
     <setting file="file://$PROJECT_DIR$/Ennemies/RangedEnnemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnnemyDamage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnnemyProjectile.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GameOverScreen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Sound/LeftKey.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -78,7 +88,8 @@
       <workItem from="1736864357854" duration="68000" />
       <workItem from="1736860886538" duration="3421000" />
       <workItem from="1736931101642" duration="4343000" />
-      <workItem from="1736936512582" duration="1639000" />
+      <workItem from="1736936512582" duration="4143000" />
+      <workItem from="1736946436225" duration="1091000" />
     </task>
     <servers />
   </component>
