@@ -104,6 +104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1
+  Game_Over: GameOverScene
+  fallLimit: 0
 --- !u!61 &2493676485901169504
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -187,7 +189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4736512684083982952}
   - component: {fileID: 4613457296451839049}
-  - component: {fileID: 6312558136779450567}
+  - component: {fileID: 2487283001864944583}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -256,7 +258,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6312558136779450567
+--- !u!114 &2487283001864944583
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class WallSpawningSpikeTrap : MonoBehaviour
+public class WallSpawningSpikeTrapLeft : MonoBehaviour
 {
     [SerializeField] private GameObject spikes; // Référence à l'objet pique (cache les piques dans le mur)
     [SerializeField] private float raiseSpeed = 2f; // Vitesse de sortie des piques

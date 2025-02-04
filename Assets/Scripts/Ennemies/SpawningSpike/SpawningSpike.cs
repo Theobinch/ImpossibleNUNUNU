@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class SpikeTrap : MonoBehaviour
+public class SpawningSpike : MonoBehaviour
 {
     [SerializeField] private GameObject spikes; // Référence à l'objet pique (cache les piques sous le sol)
     [SerializeField] private float raiseSpeed = 2f; // Vitesse de montée des piques

@@ -109,7 +109,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1.25
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 731e5315e91b9c94fb5cab1bbc7f37f5, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -284,6 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 1
   Game_Over: GameOverScene
+  fallLimit: 0
 --- !u!58 &8125893792547178142
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skinwalker-removebg-preview_0: 2935336946565418604
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
