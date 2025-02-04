@@ -9,16 +9,12 @@ public class PlayerMovement : MonoBehaviour
     [Header("Layers")]
     [SerializeField] private LayerMask groundLayer;
 
-    [Header("Sounds")]
-    [SerializeField] private AudioClip jumpSound;
-
     private Rigidbody2D body;
     private Animator anim;
     private CircleCollider2D boxCollider;
     private float horizontalInput;
-    private bool isJumping; // Empêche les sauts multiples et la modification du saut en vol
-    private bool hasJumped; // Assure qu'on ne saute qu'une seule fois par pression de la touche
-
+    private bool isJumping; 
+    private bool hasJumped; 
     private void Awake()
     {
         // Grab references for Rigidbody and Animator from the object

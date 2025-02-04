@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdd7a790-a35c-4943-93d6-7e502bfb7a19" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Levels/Level01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Levels/Level01.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ennemies/Folder.DotSettings.user.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../utils/DePixelBreit SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../utils/DePixelBreit SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +87,7 @@
       <workItem from="1736936512582" duration="4143000" />
       <workItem from="1736946436225" duration="1091000" />
       <workItem from="1736954166336" duration="1298000" />
+      <workItem from="1738676780479" duration="33000" />
     </task>
     <servers />
   </component>
