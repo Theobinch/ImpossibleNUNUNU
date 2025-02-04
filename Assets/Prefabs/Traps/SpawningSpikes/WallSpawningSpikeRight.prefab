@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2911064073334275446, guid: fc4f52eb633569845a776159087d24a5, type: 3}
       propertyPath: m_Name
-      value: WallSpawningSpikeRight Variant
+      value: WallSpawningSpikeRight
       objectReference: {fileID: 0}
     - target: {fileID: 3672719531455129265, guid: fc4f52eb633569845a776159087d24a5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52,7 +52,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6772766771839259227, guid: fc4f52eb633569845a776159087d24a5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
