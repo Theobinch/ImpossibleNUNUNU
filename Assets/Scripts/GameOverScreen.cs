@@ -10,7 +10,7 @@ public class GameOverScreen : MonoBehaviour
 
 	public void RestartButton()
 	{
-		SceneManager.LoadScene("Test_RangedEnnemy");
+		SceneManager.LoadScene("Level01");
 	}
 
 	public void ExitButton()

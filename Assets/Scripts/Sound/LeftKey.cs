@@ -12,7 +12,7 @@ public class LeftKey : MonoBehaviour
     void Update()
     {
         // Vérifier si touche Q ou flèche gauche pressée
-        if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow))
+        if ((Input.GetKey(KeyCode.LeftArrow)) || (Input.GetKey(KeyCode.Q)))
         {
             pressTime += Time.deltaTime;
 
@@ -37,7 +37,6 @@ public class LeftKey : MonoBehaviour
 
     void PlaySound(AudioClip clip)
     {
-        // Utiliser la méthode correcte pour vérifier l'activation des sons des touches
         if (clip != null && audioSource != null && AudioSettingsManager.Instance.AreKeySoundsEnabled)
         {
             audioSource.PlayOneShot(clip);
@@ -46,13 +45,11 @@ public class LeftKey : MonoBehaviour
 
     void PlayShortPressSound()
     {
-        // Utiliser la fonction générique pour jouer un son
         PlaySound(shortPressClip);
     }
 
     void PlayLongPressSound()
     {
-        // Utiliser la fonction générique pour jouer un son
         PlaySound(longPressClip);
     }
 }

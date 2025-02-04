@@ -7,21 +7,20 @@ using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
-    public AudioMixer audioMixer; // Gestionnaire des volumes
-    public Slider musicSlider; // Slider pour régler le volume de la musique
+    public AudioMixer audioMixer; 
+    public Slider musicSlider; 
 
-    [SerializeField] private TMP_Dropdown resolutionDropdown; // Dropdown pour les résolutions
-    [SerializeField] private Toggle keySoundsToggle; // Toggle pour activer/désactiver les sons des touches
+    [SerializeField] private TMP_Dropdown resolutionDropdown; 
+    [SerializeField] private Toggle keySoundsToggle; 
 
-    private Resolution[] resolutions; // Toutes les résolutions disponibles
-    private List<Resolution> filteredResolutions; // Résolutions filtrées par le taux de rafraîchissement actuel
+    private Resolution[] resolutions;
+    private List<Resolution> filteredResolutions; 
 
-    private float currentRefreshRate; // Taux de rafraîchissement actuel
-    private int currentResolutionIndex = 0; // Index de la résolution actuelle
+    private float currentRefreshRate; 
+    private int currentResolutionIndex = 0; 
 
     void Start()
     {
-        // Initialisation des résolutions disponibles et des options
         resolutions = Screen.resolutions;
         filteredResolutions = new List<Resolution>();
 
@@ -36,7 +35,6 @@ public class SettingsMenu : MonoBehaviour
             }
         }
 
-        // Remplir la liste déroulante avec les résolutions filtrées
         List<string> options = new List<string>();
         for (int i = 0; i < filteredResolutions.Count; i++)
         {
@@ -52,7 +50,6 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
 
-        // Initialiser le volume de la musique
         float currentVolume;
         if (audioMixer.GetFloat("MusicVolume", out currentVolume))
         {
@@ -61,10 +58,8 @@ public class SettingsMenu : MonoBehaviour
 
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
 
-        // Initialiser l'état du Toggle
         keySoundsToggle.isOn = AudioSettingsManager.Instance.AreKeySoundsEnabled;
 
-        // Ajouter un listener pour surveiller les changements du Toggle
         keySoundsToggle.onValueChanged.AddListener(OnKeySoundsToggleChanged);
     }
 
@@ -82,7 +77,6 @@ public class SettingsMenu : MonoBehaviour
 
     private void OnKeySoundsToggleChanged(bool isEnabled)
     {
-        // Mettre à jour l'état global des sons des touches
         AudioSettingsManager.Instance.AreKeySoundsEnabled = isEnabled;
     }
 }
