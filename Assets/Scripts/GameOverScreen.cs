@@ -5,7 +5,7 @@ public class GameOverScreen : MonoBehaviour
 {
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             RestartGame();
         }
