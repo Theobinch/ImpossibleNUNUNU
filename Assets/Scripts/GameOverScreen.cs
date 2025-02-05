@@ -3,28 +3,39 @@ using UnityEngine.SceneManagement;
 
 public class GameOverScreen : MonoBehaviour
 {
-	public void Setup()
-	{
-		gameObject.SetActive(true);
-	}
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            RestartGame();
+        }
+    }
+    public void Setup()
+    {
+        gameObject.SetActive(true);
+    }
 
-	public void RestartButton()
-	{
-		SceneManager.LoadScene("Level01");
-	}
+    public void RestartButton()
+    {
+        RestartGame();
+    }
 
-	public void ExitButton()
-	{
-		SceneManager.LoadScene("MainMenu");
-	}
+    private void RestartGame()
+    {
+        SceneManager.LoadScene("Level01");
+    }
 
-	public void RageQuitButton()
-	{
-		Application.Quit();
-		
-        #if UNITY_EDITOR
+    public void ExitButton()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void RageQuitButton()
+    {
+        Application.Quit();
+
+#if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
-        #endif
-	}
-
+#endif
+    }
 }
