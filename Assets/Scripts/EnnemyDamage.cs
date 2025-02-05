@@ -17,6 +17,8 @@ public class PlayerCollisions : MonoBehaviour
 
     public AudioSource milestoneAudioSource; // Source audio pour le son des 20 morts
     public AudioClip milestoneClip; // Son spécial à jouer toutes les 20 morts
+    
+    
 
     private void Awake()
     {
@@ -77,6 +79,12 @@ public class PlayerCollisions : MonoBehaviour
            
             rb.linearVelocity = new Vector2(0, 6f); 
             playerCollider.enabled = false;
+        }
+        
+        GameObject cinemachineCamera = GameObject.Find("CinemachineCamera");
+        if (cinemachineCamera != null)
+        {
+            cinemachineCamera.SetActive(false);
         }
 
         Invoke(nameof(GameOver), 1);
