@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneTeleport : MonoBehaviour
+public class EndLevelTP : MonoBehaviour
 {
     public string sceneName;
 
