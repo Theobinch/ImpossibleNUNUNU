@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerCollisions : MonoBehaviour
 {
@@ -9,6 +11,9 @@ public class PlayerCollisions : MonoBehaviour
     private Collider2D playerCollider;
     public string Game_Over = "GameOverScene"; 
     [SerializeField] public float fallLimit;
+    public TextMeshProUGUI deathCountText;
+    
+    public static int deathCount = 0; 
 
     private void Awake()
     {
@@ -21,6 +26,15 @@ public class PlayerCollisions : MonoBehaviour
         if (transform.position.y < fallLimit && !isDead)
         {
             Die();
+        }
+        
+        if (deathCountText != null)
+        {
+            deathCountText.text = "Deaths: " + deathCount;  // Affiche le nombre de morts
+        }
+        else
+        {
+            Debug.LogWarning("Death Count Text is not assigned in the Inspector!");
         }
     }
 
@@ -45,6 +59,7 @@ public class PlayerCollisions : MonoBehaviour
     public void Die()
     {
         isDead = true;
+        deathCount++; 
         
         if (rb != null)
         {
