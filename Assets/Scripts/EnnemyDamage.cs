@@ -9,11 +9,14 @@ public class PlayerCollisions : MonoBehaviour
     private bool isDead = false; 
     private Rigidbody2D rb; 
     private Collider2D playerCollider;
-    public string Game_Over = "GameOverScene"; 
+    public string Game_Over = "Game_Over"; 
     [SerializeField] public float fallLimit;
-    public TextMeshProUGUI deathCountText;
     
+    public TextMeshProUGUI deathCountText; 
     public static int deathCount = 0; 
+
+    public AudioSource milestoneAudioSource; // Source audio pour le son des 20 morts
+    public AudioClip milestoneClip; // Son spécial à jouer toutes les 20 morts
 
     private void Awake()
     {
@@ -30,7 +33,7 @@ public class PlayerCollisions : MonoBehaviour
         
         if (deathCountText != null)
         {
-            deathCountText.text = "Deaths: " + deathCount;  // Affiche le nombre de morts
+            deathCountText.text = "Deaths: " + deathCount; 
         }
         else
         {
@@ -61,6 +64,11 @@ public class PlayerCollisions : MonoBehaviour
         isDead = true;
         deathCount++; 
         
+        if (deathCount % 20 == 0 && milestoneAudioSource != null && milestoneClip != null)
+        {
+            milestoneAudioSource.PlayOneShot(milestoneClip);
+        }
+
         if (rb != null)
         {
             rb.linearVelocity = Vector2.zero; 
