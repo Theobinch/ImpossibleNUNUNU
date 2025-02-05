@@ -159,7 +159,6 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  jumpSound: {fileID: 0}
 --- !u!114 &4363534110649231296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,8 +282,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1
-  Game_Over: GameOverScene
-  fallLimit: 0
+  Game_Over: Game_Over
+  fallLimit: -5
 --- !u!58 &8125893792547178142
 CircleCollider2D:
   m_ObjectHideFlags: 0

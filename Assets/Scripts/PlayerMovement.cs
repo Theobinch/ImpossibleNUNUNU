@@ -17,7 +17,6 @@ public class PlayerMovement : MonoBehaviour
     private bool hasJumped; 
     private void Awake()
     {
-        // Grab references for Rigidbody and Animator from the object
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<CircleCollider2D>();
@@ -27,47 +26,39 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
 
-        // Mouvement horizontal
         body.linearVelocity = new Vector2(horizontalInput * speed, body.linearVelocity.y);
 
-        // Flip du personnage lorsqu'il change de direction
         if (horizontalInput > 0.01f)
             transform.localScale = Vector3.one;
         else if (horizontalInput < -0.01f)
             transform.localScale = new Vector3(-1, 1, 1);
 
-        // Mise à jour des paramètres de l'animator
         anim.SetBool("PlayerRun", Mathf.Abs(horizontalInput) > 0.01f);
         anim.SetBool("IsGrounded", isGrounded());
 
-        // Gestion du saut
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded() && !hasJumped)
         {
             Jump();
-            hasJumped = true; // Marquer qu'un saut a été effectué
+            hasJumped = true;
         }
 
-        // Ajustement de la hauteur du saut (réduit la vitesse verticale si on relâche la touche)
         if (Input.GetKeyUp(KeyCode.Space) && body.linearVelocity.y > 0)
         {
             body.linearVelocity = new Vector2(body.linearVelocity.x, body.linearVelocity.y * 0.5f);
         }
 
-        // Reset du saut quand le joueur touche le sol
         if (isGrounded())
         {
-            hasJumped = false; // Réinitialise la possibilité de sauter après un atterrissage
+            hasJumped = false; 
         }
     }
 
     private void Jump()
     {
-        if (isGrounded()) // Saut uniquement si le joueur est au sol
+        if (isGrounded()) 
         {
             body.linearVelocity = new Vector2(body.linearVelocity.x, jumpPower);
             anim.SetTrigger("PlayerJump");
-	
-
         }
     }
 
