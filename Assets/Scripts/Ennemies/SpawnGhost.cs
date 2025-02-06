@@ -2,16 +2,35 @@ using UnityEngine;
 
 public class SpawnGhost : MonoBehaviour
 {
-    public GameObject ghost; // Référence au GameObject fantôme
-    private bool ghostActivated = false; // Pour éviter d'activer plusieurs fois
+    public GameObject ghost; 
+    private bool ghostActivated = false; 
 
-    // Cette fonction est appelée lorsqu'un objet entre dans la zone de trigger
+    public AudioSource audioSource; 
+    public AudioClip activationSound;
+
+    void Start()
+    {
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        audioSource.clip = activationSound;
+        audioSource.playOnAwake = false;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !ghostActivated) // Vérifie si c'est le joueur
+        if (collision.CompareTag("Player") && !ghostActivated) 
         {
-            ghost.SetActive(true); // Active le fantôme
-            ghostActivated = true; // Empêche d'activer à nouveau le fantôme
+            ghost.SetActive(true); 
+            ghostActivated = true; 
+     
+            if (audioSource.clip != null)
+            {
+                audioSource.Play();
+            }
         }
     }
 }

@@ -92,3 +92,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghost: {fileID: 0}
+  audioSource: {fileID: 0}
+  activationSound: {fileID: 8300000, guid: c7418583fb4c3a84bbfaa93ef5991d7c, type: 3}
