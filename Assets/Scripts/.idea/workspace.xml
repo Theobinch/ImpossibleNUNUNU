@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdd7a790-a35c-4943-93d6-7e502bfb7a19" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Levels/Level02.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Levels/Level02.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Levels/Level01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Levels/Level01.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnnemyDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnnemyDamage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnnemyProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnnemyProjectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sound/LeftKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Sound/LeftKey.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sound/RightKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Sound/RightKey.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +40,11 @@
     <setting file="file://$PROJECT_DIR$/EnnemyDamage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnnemyProjectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameOverScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Menu/SettingsMenu.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Sound/JumpKey.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Sound/LeftKey.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Sound/RightKey.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -98,7 +103,7 @@
       <workItem from="1738834756087" duration="82000" />
       <workItem from="1738838298221" duration="1655000" />
       <workItem from="1738841749220" duration="33000" />
-      <workItem from="1738842765584" duration="1694000" />
+      <workItem from="1738842765584" duration="4067000" />
     </task>
     <servers />
   </component>
