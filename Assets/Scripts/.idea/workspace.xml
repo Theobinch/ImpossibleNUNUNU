@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdd7a790-a35c-4943-93d6-7e502bfb7a19" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Levels/Level01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Levels/Level01.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Levels/Level02.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Levels/Level02.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Prefabs/DeathCount.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Prefabs/DeathCount/Canvas.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Prefabs/DeathCount/Canvas.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnnemyDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnnemyDamage.cs" afterDir="false" />
     </list>
@@ -102,7 +98,7 @@
       <workItem from="1738834756087" duration="82000" />
       <workItem from="1738838298221" duration="1655000" />
       <workItem from="1738841749220" duration="33000" />
-      <workItem from="1738842765584" duration="716000" />
+      <workItem from="1738842765584" duration="1694000" />
     </task>
     <servers />
   </component>

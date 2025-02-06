@@ -63,8 +63,12 @@ public class PlayerCollisions : MonoBehaviour
 
     public void Die()
     {
+        if (CompareTag("Player")) 
+        {
+            deathCount++; 
+        }
+
         isDead = true;
-        deathCount++; 
         
         if (deathCount % 10 == 0 && milestoneAudioSource != null && milestoneClip != null)
         {
