@@ -16,8 +16,8 @@ public class RightKey : MonoBehaviour
         {
             pressTime += Time.deltaTime;
 
-            // Jouer son long après 0.6 secondes
-            if (pressTime >= 0.6f && !isLongPressPlayed)
+            // Jouer son long après 0.8 secondes
+            if (pressTime >= 0.8f && !isLongPressPlayed)
             {
                 PlayLongPressSound();
                 isLongPressPlayed = true; 
