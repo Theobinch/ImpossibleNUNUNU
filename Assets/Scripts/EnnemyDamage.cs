@@ -15,8 +15,8 @@ public class PlayerCollisions : MonoBehaviour
     public TextMeshProUGUI deathCountText; 
     public static int deathCount = 0; 
 
-    public AudioSource milestoneAudioSource; // Source audio pour le son des 20 morts
-    public AudioClip milestoneClip; // Son spécial à jouer toutes les 20 morts
+    public AudioSource milestoneAudioSource; 
+    public AudioClip milestoneClip; 
     
     
 
@@ -66,7 +66,7 @@ public class PlayerCollisions : MonoBehaviour
         isDead = true;
         deathCount++; 
         
-        if (deathCount % 20 == 0 && milestoneAudioSource != null && milestoneClip != null)
+        if (deathCount % 10 == 0 && milestoneAudioSource != null && milestoneClip != null)
         {
             milestoneAudioSource.PlayOneShot(milestoneClip);
         }

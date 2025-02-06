@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fdd7a790-a35c-4943-93d6-7e502bfb7a19" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../Levels/Level01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Levels/Level01.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Levels/Level02.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Levels/Level02.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnnemyDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EnnemyDamage.cs" afterDir="false" />
     </list>
@@ -33,7 +34,7 @@
     <setting file="file://$PROJECT_DIR$/EndLevelTP.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ennemies/MoveTurtle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ennemies/RangedEnnemy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnnemyDamage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnnemyDamage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnnemyProjectile.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameOverScreen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
@@ -94,6 +95,8 @@
       <workItem from="1738756478843" duration="13000" />
       <workItem from="1738756528177" duration="692000" />
       <workItem from="1738763838542" duration="2609000" />
+      <workItem from="1738834756087" duration="82000" />
+      <workItem from="1738838298221" duration="309000" />
     </task>
     <servers />
   </component>
