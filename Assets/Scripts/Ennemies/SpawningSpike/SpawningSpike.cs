@@ -28,10 +28,9 @@ public class SpawningSpike : MonoBehaviour
         {
             triggered = true;
             
-            // Jouer le son
-            if (spikeSound != null && audioSource != null)
+            if (audioSource != null && spikeSound != null)
             {
-                audioSource.Play();
+                audioSource.PlayOneShot(spikeSound);
             }
             
             StartCoroutine(RaiseSpikes()); // Lancer la coroutine pour lever les piques
