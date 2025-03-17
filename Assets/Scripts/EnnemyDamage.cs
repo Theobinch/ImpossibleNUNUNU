@@ -65,6 +65,9 @@ public class PlayerCollisions : MonoBehaviour
     {
         isDead = true;
         deathCount++; 
+        ChronoTime chrono = FindObjectOfType<ChronoTime>();
+        chrono.StopChrono();
+
         
         if (deathCount % 20 == 0 && milestoneAudioSource != null && milestoneClip != null)
         {
@@ -88,6 +91,15 @@ public class PlayerCollisions : MonoBehaviour
         }
 
         Invoke(nameof(GameOver), 1);
+        Invoke("ResetChrono", 1.0f);
+
+    }
+
+        void ResetChrono()
+    {
+        ChronoTime chrono = FindObjectOfType<ChronoTime>();
+        chrono.ResetChrono();
+
     }
 
     public void GameOver()
