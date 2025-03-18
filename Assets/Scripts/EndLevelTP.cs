@@ -7,12 +7,9 @@ public class EndLevelTP : MonoBehaviour
     public string sceneName;
 
     private AudioSource audioSource;
-    [SerializeField] private AudioClip checkpointSound;
-
     void Start()
     {
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.clip = checkpointSound;
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
 
@@ -20,7 +17,7 @@ public class EndLevelTP : MonoBehaviour
     {
         if (other.CompareTag("Player")) 
         {
-            audioSource.PlayOneShot(checkpointSound);
+            audioSource.Play();
             Thread.Sleep(2000);
             SceneManager.LoadScene(sceneName);
         }

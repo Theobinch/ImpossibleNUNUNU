@@ -1764,7 +1764,7 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: cd9bc48b2ab36cf46857df305ce20953, type: 2}
   musicSlider: {fileID: 1394349431}
   resolutionDropdown: {fileID: 1014220258}
-  keySoundsToggle: {fileID: 326571455}
+  effectsToggle: {fileID: 0}
 --- !u!1 &713832971
 GameObject:
   m_ObjectHideFlags: 0
@@ -2987,7 +2987,7 @@ AudioSource:
   m_GameObject: {fileID: 1227076544}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: cd9bc48b2ab36cf46857df305ce20953, type: 2}
+  OutputAudioMixerGroup: {fileID: -5689790919898954865, guid: cd9bc48b2ab36cf46857df305ce20953, type: 2}
   m_audioClip: {fileID: 8300000, guid: df078715adae1f04dba9e416df4a856f, type: 3}
   m_Resource: {fileID: 8300000, guid: df078715adae1f04dba9e416df4a856f, type: 3}
   m_PlayOnAwake: 1

@@ -11,7 +11,8 @@ public class SettingsMenu : MonoBehaviour
     public Slider musicSlider; 
 
     [SerializeField] private TMP_Dropdown resolutionDropdown; 
-    [SerializeField] private Toggle keySoundsToggle; 
+    [SerializeField] private Toggle effectsToggle; 
+    
 
     private Resolution[] resolutions;
     private List<Resolution> filteredResolutions; 
@@ -58,9 +59,8 @@ public class SettingsMenu : MonoBehaviour
 
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
 
-        keySoundsToggle.isOn = AudioSettingsManager.Instance.AreKeySoundsEnabled;
-
-        keySoundsToggle.onValueChanged.AddListener(OnKeySoundsToggleChanged);
+        effectsToggle.isOn = true;
+        effectsToggle.onValueChanged.AddListener(SetEffectsVolume);
     }
 
     public void SetResolution(int resolutionIndex)
@@ -75,8 +75,15 @@ public class SettingsMenu : MonoBehaviour
         audioMixer.SetFloat("MusicVolume", dbVolume);
     }
 
-    private void OnKeySoundsToggleChanged(bool isEnabled)
+    private void SetEffectsVolume(bool isOn)
     {
-        AudioSettingsManager.Instance.AreKeySoundsEnabled = isEnabled;
+        if (!isOn)
+        {
+            audioMixer.SetFloat("EffectsVolume", -80f);
+        }
+        else
+        {
+            audioMixer.SetFloat("EffectsVolume", 0f);
+        }
     }
 }
