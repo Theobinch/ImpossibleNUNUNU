@@ -3,7 +3,7 @@ using UnityEngine;
 public class AudioSettingsManager : MonoBehaviour
 {
     public static AudioSettingsManager Instance { get; private set; }
-    public bool AreKeySoundsEnabled { get; set; } = true; // Par défaut, les sons des touches sont activés
+    public bool AreKeySoundsEnabled { get; set; } = true;
 
     private void Awake()
     {
