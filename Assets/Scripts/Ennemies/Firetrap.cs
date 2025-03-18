@@ -4,26 +4,26 @@ using System.Collections;
 public class Firetrap : MonoBehaviour
 {
     [Header("Firetrap Timers")]
-    [SerializeField] private float activationDelay; // Temps avant l'activation
-    [SerializeField] private float activeTime; // Durée pendant laquelle le piège reste actif
+    [SerializeField] private float activationDelay; 
+    [SerializeField] private float activeTime; 
     private Animator anim;
     private SpriteRenderer spriteRend;
+    private AudioSource audioSource;
 
-    private bool triggered; // Quand le piège est déclenché
-    private bool active; // Quand le piège est actif et peut faire des dégâts
 
+    private bool triggered;
+    private bool active; 
     private void Awake()
     {
         anim = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Si c'est le joueur qui entre dans la zone du piège
         if (collision.CompareTag("Player"))
         {
-            // Si le piège n'a pas encore été déclenché, on lance l'activation
             if (!triggered)
             {
                 StartCoroutine(ActivateFiretrap());
@@ -33,38 +33,32 @@ public class Firetrap : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        // Si le piège est actif et que le joueur est dans la zone
         if (active && collision.CompareTag("Player"))
         {
-            // On inflige des dégâts au joueur
             PlayerCollisions pCollision = collision.GetComponent<PlayerCollisions>();
             if (pCollision != null)
             {
-                pCollision.TakeDamages(1); // Inflige des dégâts au joueur
+                pCollision.TakeDamages(1);
             }
         }
     }
 
     private IEnumerator ActivateFiretrap()
     {
-        // Indiquer au joueur que le piège est en train de se déclencher
         triggered = true;
-        spriteRend.color = Color.red; // Change la couleur du piège en rouge pour signaler qu'il va se déclencher
+        spriteRend.color = Color.red; 
 
-        // Attendre le délai d'activation
         yield return new WaitForSeconds(activationDelay);
 
-        // Une fois le délai passé, le piège devient actif
-        spriteRend.color = Color.white; // Remet la couleur initiale du piège
-        active = true; // Le piège est maintenant actif et peut infliger des dégâts
-        anim.SetBool("activated", true); // Active l'animation du piège
+        spriteRend.color = Color.white; 
+        active = true; 
+        anim.SetBool("activated", true); 
+        audioSource.Play();
 
-        // Attendre la durée pendant laquelle le piège reste actif
         yield return new WaitForSeconds(activeTime);
 
-        // Après le temps d'activation, désactiver le piège
         active = false;
-        triggered = false; // Réinitialise l'état du piège
-        anim.SetBool("activated", false); // Arrête l'animation
+        triggered = false; 
+        anim.SetBool("activated", false);
     }
 }
