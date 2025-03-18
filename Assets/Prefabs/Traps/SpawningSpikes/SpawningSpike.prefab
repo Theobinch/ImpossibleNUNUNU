@@ -256,3 +256,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spikes: {fileID: 337331779634929337}
   raiseSpeed: 2
+  spikeSound: {fileID: 0}
