@@ -9,18 +9,14 @@ public class SpikeHeadTrap : MonoBehaviour
     void Start()
     {
         Destroy(gameObject.GetComponent<SpriteRenderer>());
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            
-            if (audioSource.clip != null)
-            {
-                audioSource.Play();
-            }
-         
+            audioSource.Play();
             connectedBloc.AddComponent<Rigidbody2D>();
             Destroy(gameObject, audioSource.clip.length); 
         }

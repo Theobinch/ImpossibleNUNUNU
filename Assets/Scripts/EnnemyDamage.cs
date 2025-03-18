@@ -6,17 +6,15 @@ using TMPro;
 public class PlayerCollisions : MonoBehaviour
 {
     public int life = 1; 
-    private bool isDead = false; 
+    public bool isDead = false; 
     private Rigidbody2D rb; 
     private Collider2D playerCollider;
-    public string Game_Over = "Game_Over"; 
-    [SerializeField] public float fallLimit;
-    
+    public string Game_Over = "Game_Over";     
     public TextMeshProUGUI deathCountText; 
     public static int deathCount = 0; 
 
-    public AudioSource milestoneAudioSource; 
-    public AudioClip milestoneClip; 
+    AudioSource audioSource; 
+    public AudioClip audioClip; 
     
     
 
@@ -24,14 +22,11 @@ public class PlayerCollisions : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
+        audioSource = GetComponent<AudioSource>();
     }
     
     private void Update()
     {
-        if (transform.position.y < fallLimit && !isDead)
-        {
-            Die();
-        }
         
         if (deathCountText != null)
         {
@@ -63,15 +58,18 @@ public class PlayerCollisions : MonoBehaviour
 
     public void Die()
     {
+        if (isDead) return;
+
         isDead = true;
         deathCount++; 
         ChronoTime chrono = FindObjectOfType<ChronoTime>();
         chrono.StopChrono();
 
+        audioSource.Play();
         
-        if (deathCount % 20 == 0 && milestoneAudioSource != null && milestoneClip != null)
+        if (deathCount % 20 == 0 && audioSource != null && audioClip != null)
         {
-            milestoneAudioSource.PlayOneShot(milestoneClip);
+            audioSource.PlayOneShot(audioClip);
         }
 
         if (rb != null)
