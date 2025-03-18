@@ -9,10 +9,12 @@ public class PauseSettings : MonoBehaviour
 {
     public AudioMixer audioMixer; 
     public Slider musicSlider; 
-    [SerializeField] private TMP_Dropdown resolutionDropdown; 
-    [SerializeField] private Toggle keySoundsToggle; 
 
-    private Resolution[] resolutions; 
+    [SerializeField] private TMP_Dropdown resolutionDropdown; 
+    [SerializeField] private Toggle effectsToggle; 
+    
+
+    private Resolution[] resolutions;
     private List<Resolution> filteredResolutions; 
 
     private float currentRefreshRate; 
@@ -23,6 +25,7 @@ public class PauseSettings : MonoBehaviour
         resolutions = Screen.resolutions;
         filteredResolutions = new List<Resolution>();
 
+        resolutionDropdown.ClearOptions();
         currentRefreshRate = Screen.currentResolution.refreshRate;
 
         for (int i = 0; i < resolutions.Length; i++)
@@ -36,7 +39,7 @@ public class PauseSettings : MonoBehaviour
         List<string> options = new List<string>();
         for (int i = 0; i < filteredResolutions.Count; i++)
         {
-            string resolutionOption = filteredResolutions[i].width + "x" + filteredResolutions[i].height;
+            string resolutionOption = filteredResolutions[i].width + "x" + filteredResolutions[i].height + " ";
             options.Add(resolutionOption);
             if (filteredResolutions[i].width == Screen.width && filteredResolutions[i].height == Screen.height)
             {
@@ -48,8 +51,6 @@ public class PauseSettings : MonoBehaviour
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
 
-        resolutionDropdown.onValueChanged.AddListener(SetResolution);
-
         float currentVolume;
         if (audioMixer.GetFloat("MusicVolume", out currentVolume))
         {
@@ -58,17 +59,14 @@ public class PauseSettings : MonoBehaviour
 
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
 
-        keySoundsToggle.isOn = AudioSettingsManager.Instance.AreKeySoundsEnabled;
-
-        keySoundsToggle.onValueChanged.AddListener(OnKeySoundsToggleChanged);
+        effectsToggle.isOn = true;
+        effectsToggle.onValueChanged.AddListener(SetEffectsVolume);
     }
 
     public void SetResolution(int resolutionIndex)
     {
         Resolution resolution = filteredResolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-
-        Debug.Log("Résolution modifiée : " + resolution.width + "x" + resolution.height);
+        Screen.SetResolution(resolution.width, resolution.height, true);
     }
 
     public void SetMusicVolume(float sliderValue)
@@ -77,9 +75,15 @@ public class PauseSettings : MonoBehaviour
         audioMixer.SetFloat("MusicVolume", dbVolume);
     }
 
-    private void OnKeySoundsToggleChanged(bool isEnabled)
+    private void SetEffectsVolume(bool isOn)
     {
-
-        AudioSettingsManager.Instance.AreKeySoundsEnabled = isEnabled;
+        if (!isOn)
+        {
+            audioMixer.SetFloat("EffectsVolume", -80f);
+        }
+        else
+        {
+            audioMixer.SetFloat("EffectsVolume", 0f);
+        }
     }
 }
