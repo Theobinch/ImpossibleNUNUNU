@@ -560,6 +560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b5161727caab36429d0220d5c692b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <AreKeySoundsEnabled>k__BackingField: 1
 --- !u!4 &158011021
 Transform:
   m_ObjectHideFlags: 0
@@ -1073,7 +1074,7 @@ GameObject:
   - component: {fileID: 326571454}
   - component: {fileID: 326571455}
   m_Layer: 5
-  m_Name: SoundToggle
+  m_Name: EffectsToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1764,7 +1765,7 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: cd9bc48b2ab36cf46857df305ce20953, type: 2}
   musicSlider: {fileID: 1394349431}
   resolutionDropdown: {fileID: 1014220258}
-  effectsToggle: {fileID: 0}
+  effectsToggle: {fileID: 326571455}
 --- !u!1 &713832971
 GameObject:
   m_ObjectHideFlags: 0
