@@ -6,7 +6,7 @@ using TMPro;
 public class PlayerCollisions : MonoBehaviour
 {
     public int life = 1; 
-    private bool isDead = false; 
+    public bool isDead = false; 
     private Rigidbody2D rb; 
     private Collider2D playerCollider;
     public string Game_Over = "Game_Over"; 
@@ -63,6 +63,8 @@ public class PlayerCollisions : MonoBehaviour
 
     public void Die()
     {
+        if (isDead) return;
+
         isDead = true;
         deathCount++; 
         ChronoTime chrono = FindObjectOfType<ChronoTime>();

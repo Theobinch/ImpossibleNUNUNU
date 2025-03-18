@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Level02
+  checkpointSound: {fileID: 8300000, guid: 87b7647358b0e3d4898bd513ad87e0de, type: 3}
 --- !u!61 &6275177499949316065
 BoxCollider2D:
   m_ObjectHideFlags: 0
