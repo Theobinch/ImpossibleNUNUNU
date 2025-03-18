@@ -3,7 +3,7 @@ using UnityEngine;
 public class SpikeHeadTrap : MonoBehaviour
 {
     public GameObject connectedBloc;
-    public AudioSource audioSource;  // Source audio
+    AudioSource audioSource;
   
 
     void Start()

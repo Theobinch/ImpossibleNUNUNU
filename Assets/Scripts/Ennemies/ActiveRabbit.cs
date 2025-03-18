@@ -3,6 +3,12 @@ using UnityEngine;
 public class ActivateRabbit : MonoBehaviour
 {
     public MoveRabbit monsterScript; 
+    AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -10,11 +16,12 @@ public class ActivateRabbit : MonoBehaviour
         {
             if (monsterScript != null)
             {
-                monsterScript.isActive = true; // Active rabbit
+                monsterScript.isActive = true;
+                audioSource.Play();
                 
                 if (monsterScript.anim != null)
                 {
-                    monsterScript.anim.SetBool("IsRunning", true); // Lance l'animation de course
+                    monsterScript.anim.SetBool("IsRunning", true);
                 }
             }
         }

@@ -5,7 +5,6 @@ public class SpawningSpike : MonoBehaviour
 {
     [SerializeField] private GameObject spikes; 
     [SerializeField] private float raiseSpeed = 2f; 
-    private AudioClip spikeSound; 
     private AudioSource audioSource;
 
     private bool triggered = false;
@@ -15,8 +14,7 @@ public class SpawningSpike : MonoBehaviour
     {
         initialPosition = spikes.transform.position;
         
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.clip = spikeSound;
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,12 +22,7 @@ public class SpawningSpike : MonoBehaviour
         if (collision.CompareTag("Player") && !triggered)
         {
             triggered = true;
-            
-            if (audioSource != null && spikeSound != null)
-            {
-                audioSource.PlayOneShot(spikeSound);
-            }
-            
+            audioSource.Play();
             StartCoroutine(RaiseSpikes());
         }
     }

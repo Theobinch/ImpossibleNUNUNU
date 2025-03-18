@@ -10,9 +10,6 @@ public class MoveRabbit : MonoBehaviour
     public float speed;
     public bool isActive = false;
 
-    public AudioSource audioSource;
-    public AudioClip runningSound;
-    private bool hasPlayedSound = false; // Empêche de rejouer le son
 
     void Start()
     {
@@ -20,13 +17,6 @@ public class MoveRabbit : MonoBehaviour
         anim = GetComponent<Animator>();
         targetPoint = pointB.transform;
 
-        audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
-        {
-            audioSource = gameObject.AddComponent<AudioSource>();
-        }
-        audioSource.clip = runningSound;
-        audioSource.playOnAwake = false;
 
         if (anim != null)
         {
@@ -57,12 +47,6 @@ public class MoveRabbit : MonoBehaviour
             anim.SetBool("IsRunning", true);
         }
 
-        // Jouer le son une seule fois
-        if (!hasPlayedSound && runningSound != null)
-        {
-            audioSource.Play();
-            hasPlayedSound = true;
-        }
 
         if (Vector2.Distance(transform.position, targetPoint.position) < 0.3f)
         {
@@ -78,7 +62,7 @@ public class MoveRabbit : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player" ))
         {
             PlayerCollisions playerCollisions = collision.GetComponent<PlayerCollisions>();
             if (playerCollisions != null)

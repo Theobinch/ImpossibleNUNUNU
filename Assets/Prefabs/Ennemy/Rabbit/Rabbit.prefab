@@ -194,8 +194,6 @@ MonoBehaviour:
   anim: {fileID: 1519760013741611509}
   speed: 12
   isActive: 0
-  audioSource: {fileID: 0}
-  runningSound: {fileID: 8300000, guid: bcbcb85683235ae4a83ba24517aa31ef, type: 3}
 --- !u!1 &2593143575513623185
 GameObject:
   m_ObjectHideFlags: 0
