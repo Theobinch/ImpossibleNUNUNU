@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2092673425710227762}
   - component: {fileID: 4443245849545365335}
   - component: {fileID: 531801232944584115}
-  - component: {fileID: 8216292627291904520}
+  - component: {fileID: 4596543267085974233}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -332,7 +332,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5761134303180281577}
   m_Enabled: 1
---- !u!82 &8216292627291904520
+--- !u!82 &4596543267085974233
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

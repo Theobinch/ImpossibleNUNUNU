@@ -5,11 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e78d5a64-d5d1-40ed-b2f0-f040a76a5bad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Scripts/Ennemies/Folder.DotSettings.user.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prefabs/SuicideObject.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prefabs/SuicideObject.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/Key/SuicideKey.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/Key/SuicideKey.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/DeathSound/DeathSound.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/DeathSound/DeathSound.mp3.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Levels/Level01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Levels/Level01.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Levels/Level02.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Levels/Level02.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Levels/Level03.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Levels/Level03.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Levels/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Levels/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewAudioMixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/NewAudioMixer.mixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prefabs/Ennemy/Ghost/AppearGhost.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Prefabs/Ennemy/Ghost/AppearGhost.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prefabs/Ennemy/MoveTurtle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Prefabs/Ennemy/MoveTurtle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prefabs/Ennemy/Rabbit/ActiveRabbit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Prefabs/Ennemy/Rabbit/ActiveRabbit.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prefabs/Ennemy/Rabbit/Rabbit1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Prefabs/Ennemy/Rabbit/Rabbit1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prefabs/RangedEnnemy/RangedEnnemyHolder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Prefabs/RangedEnnemy/RangedEnnemyHolder.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prefabs/Traps/Firetrap.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Prefabs/Traps/Firetrap.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prefabs/Traps/Saw.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Prefabs/Traps/Saw.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prefabs/Traps/SpawningSpikes/SpawningSpike.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Prefabs/Traps/SpawningSpikes/SpawningSpike.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prefabs/Traps/SpikeHead.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Prefabs/Traps/SpikeHead.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prefabs/Utils/End (Idle).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Prefabs/Utils/End (Idle).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prefabs/Utils/Pad.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Prefabs/Utils/Pad.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/EasterEgg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Key.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/EasterEgg/SKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Key/SKey.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/EasterEgg/SKey.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Key/SKey.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/EndLevelTP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/EndLevelTP.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Ennemies/SpikeHead Trap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Ennemies/SpikeHead Trap.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/EnnemyDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/EnnemyDamage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/DePixelBreit SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/utils/DePixelBreit SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Menu/AudioSettingsManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Menu/AudioSettingsManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Menu/PauseSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Menu/PauseSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Menu/SettingsMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Menu/SettingsMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Sound.meta" beforeDir="false" afterPath="$PROJECT_DIR$/utils/DeathSound.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Sound/.idea/projectSettingsUpdater.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Sound/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dez 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/dez 1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dez11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/dez11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dez12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/dez12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dez13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/dez13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dez14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/dez14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dez15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/dez15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dez16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/dez16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dez4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/dez4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dez5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/dez5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dez6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/dez6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dez7.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/dez7.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dez8.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/dez8.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dez9.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/dez9.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,19 +82,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Merging main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -72,6 +115,7 @@
       <workItem from="1738761230291" duration="725000" />
       <workItem from="1738763283413" duration="217000" />
       <workItem from="1738764287016" duration="14000" />
+      <workItem from="1742310953424" duration="31000" />
     </task>
     <servers />
   </component>
