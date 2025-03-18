@@ -3,27 +3,24 @@ using System.Collections;
 
 public class SpawningSpike : MonoBehaviour
 {
-    [SerializeField] private GameObject spikes; // Référence à l'objet pique (cache les piques sous le sol)
-    [SerializeField] private float raiseSpeed = 2f; // Vitesse de montée des piques
-    [SerializeField] private AudioClip spikeSound; // Son à jouer lors de l'activation
-    private AudioSource audioSource; // Composant AudioSource
+    [SerializeField] private GameObject spikes; 
+    [SerializeField] private float raiseSpeed = 2f; 
+    private AudioClip spikeSound; 
+    private AudioSource audioSource;
 
-    private bool triggered = false; // Si le piège a été déclenché
-    private Vector3 initialPosition; // Position initiale des piques
+    private bool triggered = false;
+    private Vector3 initialPosition; 
 
     private void Start()
     {
-        // Sauvegarder la position initiale des piques sous le sol
         initialPosition = spikes.transform.position;
         
-        // Ajouter un AudioSource si ce n'est pas déjà fait
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = spikeSound;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Si le joueur entre dans la zone de détection, activer les piques
         if (collision.CompareTag("Player") && !triggered)
         {
             triggered = true;
@@ -33,19 +30,18 @@ public class SpawningSpike : MonoBehaviour
                 audioSource.PlayOneShot(spikeSound);
             }
             
-            StartCoroutine(RaiseSpikes()); // Lancer la coroutine pour lever les piques
+            StartCoroutine(RaiseSpikes());
         }
     }
 
     private IEnumerator RaiseSpikes()
     {
-        float targetHeight = initialPosition.y + 0.16f; // Hauteur à laquelle les piques sortent du sol
+        float targetHeight = initialPosition.y + 0.16f; 
 
-        // Lever les piques jusqu'à la hauteur cible
         while (spikes.transform.position.y < targetHeight)
         {
             Vector3 currentPos = spikes.transform.position;
-            currentPos.y += raiseSpeed * Time.deltaTime; // Déplacer les piques
+            currentPos.y += raiseSpeed * Time.deltaTime;
             spikes.transform.position = currentPos;
             yield return null;
         }

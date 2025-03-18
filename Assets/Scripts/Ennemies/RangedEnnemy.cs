@@ -22,10 +22,12 @@ public class RangedEnnemy : MonoBehaviour
     //References
 
     private Animator anim;
+    AudioSource audioSource;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -56,7 +58,9 @@ public class RangedEnnemy : MonoBehaviour
         {
             if (!bullets[i].activeInHierarchy)
             {
+                audioSource.Play();
                 return i;
+                
             }
         }
         return 0;
@@ -72,7 +76,6 @@ public class RangedEnnemy : MonoBehaviour
     }
     private void OnDrawGizmos()
     {
-        // Vérifier si le boxCollider est bien assigné
         if (boxCollider != null)
         {
             Gizmos.color = Color.red;
