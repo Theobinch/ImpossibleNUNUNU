@@ -4,10 +4,10 @@ using UnityEngine.SceneManagement;
 public class GameOverScreen : MonoBehaviour
 {
     
-    //permet de restart directement en appuyant sur la barre espace
+    //permet de restart directement en appuyant sur la barre espace ou sur la flèche du haut
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             RestartGame();
         }
