@@ -37,13 +37,13 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("PlayerRun", Mathf.Abs(horizontalInput) > 0.01f);
         anim.SetBool("IsGrounded", isGrounded());
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded() && !hasJumped)
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)  && isGrounded() && !hasJumped)
         {
             Jump();
             hasJumped = true;
         }
 
-        if (Input.GetKeyUp(KeyCode.Space) && body.linearVelocity.y > 0)
+        if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.UpArrow) && body.linearVelocity.y > 0)
         {
             body.linearVelocity = new Vector2(body.linearVelocity.x, body.linearVelocity.y * 0.5f);
         }
