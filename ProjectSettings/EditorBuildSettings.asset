@@ -14,13 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/MainMenu.unity
     guid: cc6e483eda18e8644aef717d181cd131
-  - enabled: 1
+  - enabled: 0
     path: Assets/Levels/Axel.unity
     guid: d50a08599b91dae43b3118ff92cacf83
-  - enabled: 1
+  - enabled: 0
     path: Assets/Levels/Test_RangedEnnemy.unity
     guid: 6cdc5ce484614264d8fac7e77ba81fa4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Levels/Theo.unity
     guid: fbebe2996b4cc00429f0cff08c0af59d
   - enabled: 1
