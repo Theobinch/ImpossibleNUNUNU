@@ -80,6 +80,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.016
       objectReference: {fileID: 0}
+    - target: {fileID: 5474106060022194743, guid: 5f532716e1702e64da5fe082273aac42, type: 3}
+      propertyPath: m_Volume
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6312558136779450567, guid: 5f532716e1702e64da5fe082273aac42, type: 3}
     - {fileID: 2487283001864944583, guid: 5f532716e1702e64da5fe082273aac42, type: 3}
