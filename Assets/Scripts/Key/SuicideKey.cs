@@ -5,6 +5,7 @@ public class SuicideKey : MonoBehaviour
     public GameObject enemyPrefab;
     private bool enemySpawned = false;
 
+    //si touche k pressé, fait apparaitre ennemi sur le player
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.K) && !enemySpawned)
@@ -13,6 +14,7 @@ public class SuicideKey : MonoBehaviour
         }
     }
 
+    //permet de faire apparaitre l'ennemi (initialisation)
     void SpawnEnemyOnPlayer()
     {
         if (enemyPrefab != null)

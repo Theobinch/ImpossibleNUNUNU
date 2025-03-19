@@ -16,6 +16,7 @@ public class EnnemyProjectile : PlayerCollisions
         coll = GetComponent<BoxCollider2D>();
     }
 
+    //permet d'actviter et de prendre en compte les collisions
     public void ActivateProjectile()
     {
         hit = false;
@@ -23,6 +24,8 @@ public class EnnemyProjectile : PlayerCollisions
         gameObject.SetActive(true);
         coll.enabled = true;
     }
+    
+    //deplace le projectile et le supprime apres un certains temps si il n'y a pas eu de colllisions
     private void Update()
     {
         if (hit) return;
@@ -34,6 +37,7 @@ public class EnnemyProjectile : PlayerCollisions
             gameObject.SetActive(false);
     }
 
+    //active animation si il touche ou le desactive 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         hit = true;
@@ -45,6 +49,8 @@ public class EnnemyProjectile : PlayerCollisions
         else
             gameObject.SetActive(false); 
     }
+    
+    //rendre l'objet inactif
     private void Deactivate()
     {
         gameObject.SetActive(false);

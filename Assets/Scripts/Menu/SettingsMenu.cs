@@ -12,9 +12,9 @@ public class SettingsMenu : MonoBehaviour
 
     [SerializeField] private Toggle effectsToggle; 
    
+    //barre de son qui permet de modifier le volume grace a un mixeur present dans l'editeur 
     void Start()
     {
-
         float currentVolume;
         if (audioMixer.GetFloat("MusicVolume", out currentVolume))
         {
@@ -27,12 +27,14 @@ public class SettingsMenu : MonoBehaviour
         effectsToggle.onValueChanged.AddListener(SetEffectsVolume);
     }
 
+    //permet de modifier le volume des sons en jeu 
     public void SetMusicVolume(float sliderValue)
     {
         float dbVolume = Mathf.Log10(Mathf.Clamp(sliderValue, 0.0001f, 1f)) * 20;
         audioMixer.SetFloat("MusicVolume", dbVolume);
     }
 
+    //permet d'activer ou non les effets en jeu 
     private void SetEffectsVolume(bool isOn)
     {
         if (!isOn)

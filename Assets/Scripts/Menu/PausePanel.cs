@@ -6,6 +6,7 @@ public class PausePanel : MonoBehaviour
     public GameObject pauseMenu;  
     private bool isPaused = false;  
 
+    //si echap appuyer, met pause si le jeu fonctionne sinon remet le jeu en fonctionnement
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -21,6 +22,7 @@ public class PausePanel : MonoBehaviour
         }
     }
     
+    //stop le jeu
     public void PauseGame()
     {
         pauseMenu.SetActive(true);  
@@ -28,6 +30,7 @@ public class PausePanel : MonoBehaviour
         isPaused = true;  
     }
     
+    //reactive la partie 
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);  
@@ -35,18 +38,21 @@ public class PausePanel : MonoBehaviour
         isPaused = false;  
     }
 
+    //permet de restart et revenir au niveau 1
     public void RestartGame()
     {
         ResumeGame();
         SceneManager.LoadScene("Level01");  
     }
     
+    //permet de retourner au menu
     public void Menu()  
     {
         ResumeGame();
         SceneManager.LoadScene("MainMenu"); 
     }
     
+    //permet de fermer la fenetre du jeu 
     public void QuitGame()
     {
         Application.Quit();

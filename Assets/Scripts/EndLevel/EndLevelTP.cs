@@ -12,6 +12,7 @@ public class EndLevelTP : MonoBehaviour
         audioSource = gameObject.GetComponent<AudioSource>();
     }
 
+    //lorsque l'objet est touche par le joeueur, lance un son puis charge la scene suivante 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")) 
@@ -20,6 +21,7 @@ public class EndLevelTP : MonoBehaviour
         }
     }
 
+    //joue un son puis charge la scene a la fin du son 
     private IEnumerator PlaySoundAndLoadScene()
     {
         audioSource.Play();

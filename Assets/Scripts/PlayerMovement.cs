@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
         boxCollider = GetComponent<CircleCollider2D>();
     }
 
+    //permet de deplacer le joueur horizontalemet, de le faire sauter, et ajouster ses mouvements 
     private void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
@@ -53,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //permet de faire sauter le player en verifiant si il est bien au sol
     private void Jump()
     {
         if (isGrounded()) 
@@ -62,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //verification si le joueur est bien sur le sol 
     private bool isGrounded()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(

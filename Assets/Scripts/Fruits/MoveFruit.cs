@@ -7,11 +7,13 @@ public class MoveFruit : MonoBehaviour
 
     private Vector3 startPosition;
 
+    //initialise la position de l'objet
     void Start()
     {
         startPosition = transform.position;
     }
 
+    //permet de deplacer l'objet verticalement 
     void Update()
     {
         float newY = startPosition.y + Mathf.Sin(Time.time * speed) * amplitude;

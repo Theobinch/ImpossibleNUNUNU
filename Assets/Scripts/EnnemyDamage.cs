@@ -17,7 +17,6 @@ public class PlayerCollisions : MonoBehaviour
     public AudioClip audioClip; 
     
     
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,9 +24,9 @@ public class PlayerCollisions : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
     
+    //permet d'avoir un compteur de mort
     private void Update()
     {
-        
         if (deathCountText != null)
         {
             deathCountText.text = "Deaths: " + deathCount; 
@@ -38,6 +37,7 @@ public class PlayerCollisions : MonoBehaviour
         }
     }
 
+    //les ennemis infligent des degats 
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Ennemy"))
@@ -46,6 +46,7 @@ public class PlayerCollisions : MonoBehaviour
         }
     }
 
+    //si la vie est inferieur ou egal a 0, le joueur meurt
     public void TakeDamages(int damage)
     {
         life -= damage;
@@ -56,6 +57,7 @@ public class PlayerCollisions : MonoBehaviour
         }
     }
 
+    //si il meurt, ajoute 1 au compteur + toutes les 20 morts, joue un son, joue animation de mort et laisse la camera sur place
     public void Die()
     {
         if (isDead) return;
@@ -92,7 +94,7 @@ public class PlayerCollisions : MonoBehaviour
         Invoke("ResetChrono", 1.0f);
 
     }
-
+        //reset le chrono
         void ResetChrono()
     {
         ChronoTime chrono = FindObjectOfType<ChronoTime>();
@@ -100,11 +102,13 @@ public class PlayerCollisions : MonoBehaviour
 
     }
 
+    //charge la scene game over
     public void GameOver()
     {
         SceneManager.LoadScene(Game_Over);
     }
 
+    //recharge la scene defini dans l'editeur 
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); 

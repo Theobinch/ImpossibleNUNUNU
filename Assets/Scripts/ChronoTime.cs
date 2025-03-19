@@ -14,8 +14,8 @@ public class ChronoTime : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
     }
-
-
+    
+    //permet de creer un chrono en minute et seconde
     void Update()
     {
         if (isRunning)
@@ -27,6 +27,7 @@ public class ChronoTime : MonoBehaviour
         }
     }
 
+    //arrete le chrono et le save 
     public void StopChrono()
     {
         isRunning = false;
@@ -34,6 +35,7 @@ public class ChronoTime : MonoBehaviour
 		PlayerPrefs.Save();
     }
 
+    //remet le chrono a 0
     public void ResetChrono()
     {
         elapsedTime = 0f;
@@ -41,6 +43,7 @@ public class ChronoTime : MonoBehaviour
 
     }
 
+    //charge la scene de fin de jeu et montre le score
 	public void LoadEndScene()
     {
         StopChrono();
