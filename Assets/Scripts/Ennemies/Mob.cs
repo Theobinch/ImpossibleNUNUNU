@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Mob : MonoBehaviour
 {
+    //detruit pbjet si touche par le joueur
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -9,5 +10,4 @@ public class Mob : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
 }

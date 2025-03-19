@@ -10,14 +10,14 @@ public class MoveRabbit : MonoBehaviour
     public float speed;
     public bool isActive = false;
 
-
+    //initialisation de la destination (point B)
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         targetPoint = pointB.transform;
 
-
+        //stop l'animation de course
         if (anim != null)
         {
             anim.SetBool("IsRunning", false);
@@ -26,6 +26,7 @@ public class MoveRabbit : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
     }
 
+    //si active, alors il se deplace vers le point
     void FixedUpdate()
     {
         if (isActive)
@@ -34,6 +35,7 @@ public class MoveRabbit : MonoBehaviour
         }
     }
 
+    //le monstre se deplace vers un point et lance l'anim de course et stop l'anim des qui arrive au point et arrete le script
     private void MoveTowardsTargetPoint()
     {
         if (targetPoint == null)
@@ -60,6 +62,7 @@ public class MoveRabbit : MonoBehaviour
         }
     }
 
+    //inflige degat au contact du joueur 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player" ))
@@ -72,6 +75,7 @@ public class MoveRabbit : MonoBehaviour
         }
     }
 
+    //dessine les point dans l'editeur pour mieux gerer la distance 
     private void OnDrawGizmos()
     {
         if (pointA != null && pointB != null)

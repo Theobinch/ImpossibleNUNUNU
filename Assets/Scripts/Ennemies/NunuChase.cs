@@ -8,13 +8,7 @@ public class NunuChase : MonoBehaviour
     public float speed;
     private float distance;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    //permet au monstre de se deplacer vers le joueur 
     void Update()
     {
         distance = Vector2.Distance(transform.position, player.transform.position);
