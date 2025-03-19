@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ChronoTime : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class ChronoTime : MonoBehaviour
     public void StopChrono()
     {
         isRunning = false;
+		PlayerPrefs.SetFloat("FinalTime", elapsedTime);
+		PlayerPrefs.Save();
     }
 
     public void ResetChrono()
@@ -36,5 +39,11 @@ public class ChronoTime : MonoBehaviour
         elapsedTime = 0f;
         isRunning = true;
 
+    }
+
+	public void LoadEndScene()
+    {
+        StopChrono();
+        SceneManager.LoadScene("EndGame"); 
     }
 }
