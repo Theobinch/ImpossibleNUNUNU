@@ -17,6 +17,7 @@ public class SpawningSpike : MonoBehaviour
         audioSource = gameObject.GetComponent<AudioSource>();
     }
 
+    //si joueur touche le piege, active le piege et lance le son
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && !triggered)
@@ -27,6 +28,7 @@ public class SpawningSpike : MonoBehaviour
         }
     }
 
+    //permet d'activer les piques et modifier leur vitesse 
     private IEnumerator RaiseSpikes()
     {
         float targetHeight = initialPosition.y + 0.16f; 

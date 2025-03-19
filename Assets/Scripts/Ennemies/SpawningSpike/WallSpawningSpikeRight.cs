@@ -22,6 +22,7 @@ public class WallSpawningSpikeTrapRight : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
+    //si joueur touche le piege, active le piege et lance le son
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && !triggered)
@@ -32,6 +33,7 @@ public class WallSpawningSpikeTrapRight : MonoBehaviour
         }
     }
 
+    //active les piege jusqua leur point de destination
     private IEnumerator RaiseWallSpikes()
     {
         while (Vector3.Distance(spikes.transform.position, targetPosition) > 0.01f)
