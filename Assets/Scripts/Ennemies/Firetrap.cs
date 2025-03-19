@@ -20,6 +20,7 @@ public class Firetrap : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
+    //si joueur touche, active le piege
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -31,6 +32,7 @@ public class Firetrap : MonoBehaviour
         }
     }
 
+    //inflige degat au player si il est touche par le piege
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (active && collision.CompareTag("Player"))
@@ -43,6 +45,7 @@ public class Firetrap : MonoBehaviour
         }
     }
 
+    //gere activation du piege, le son, l'animation et les degats et arrete le piege apres un certain temps 
     private IEnumerator ActivateFiretrap()
     {
         triggered = true;

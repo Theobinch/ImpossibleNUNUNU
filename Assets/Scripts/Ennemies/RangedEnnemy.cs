@@ -18,23 +18,22 @@ public class RangedEnnemy : MonoBehaviour
     [Header("Player Layer")]
     [SerializeField] private LayerMask playerLayer;
     private float cooldownTimer = Mathf.Infinity;
-    
-    //References
 
     private Animator anim;
     AudioSource audioSource;
 
+    //initialise les son et animation
     private void Awake()
     {
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
     }
 
+    //attque le joueur quand il est dans la zone du monstre et tire a chaque fin du cooldown
     private void Update()
     {
         cooldownTimer += Time.deltaTime;
         
-        // Attack only when player in sight?
         if (PlayerInSight())
         {
             if (cooldownTimer >= attackCooldown)
@@ -45,6 +44,7 @@ public class RangedEnnemy : MonoBehaviour
         }
     }
 
+    //permet de tirer depuis la position du monstre
     private void RangedAttack()
     {
         cooldownTimer = 0;
@@ -52,6 +52,7 @@ public class RangedEnnemy : MonoBehaviour
         bullets[FindBullet()].GetComponent<EnnemyProjectile>().ActivateProjectile();
     }
 
+    //joue son si il tire sinon non
     private int FindBullet()
     {
         for (int i = 0; i < bullets.Length; i++)
@@ -65,6 +66,8 @@ public class RangedEnnemy : MonoBehaviour
         }
         return 0;
     }
+    
+    //verificiation de la presence du joueur dans la zone 
     private bool PlayerInSight()
     {
         RaycastHit2D hit =
@@ -74,6 +77,8 @@ public class RangedEnnemy : MonoBehaviour
 
         return hit.collider != null;
     }
+    
+    //permet d'afficher la zone en rouge dans l'editeur pour mieux comprendre la portée
     private void OnDrawGizmos()
     {
         if (boxCollider != null)

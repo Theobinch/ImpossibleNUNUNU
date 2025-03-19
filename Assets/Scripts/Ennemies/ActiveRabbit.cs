@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ActivateRabbit : MonoBehaviour
+public class ActiveRabbit : MonoBehaviour
 {
     public MoveRabbit monsterScript; 
     AudioSource audioSource;
@@ -10,6 +10,7 @@ public class ActivateRabbit : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
+    //lance le son et l'animation lorsque le joueur passe dans la zone d'activation 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
