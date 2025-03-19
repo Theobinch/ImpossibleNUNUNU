@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdd7a790-a35c-4943-93d6-7e502bfb7a19" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Levels/Level01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Levels/Level01.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Levels/Level02.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Levels/Level02.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChronoTime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ChronoTime.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndLevelTP.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndLevelTP.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pictures/GAME-OVER-19-03-2025-removebg-preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pictures/GAME-OVER-19-03-2025-removebg-preview.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pictures/IMPOSSIBLE-NUNUNU-19-03-2025-removebg-preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pictures/IMPOSSIBLE-NUNUNU-19-03-2025-removebg-preview.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,18 +36,15 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/ChronoTime.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EndLevelTP.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ChronoTime.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ennemies/MoveTurtle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ennemies/RangedEnnemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnnemyDamage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnnemyProjectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameOverScreen.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Menu/SettingsMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Menu/PausePanel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Menu/SettingsMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Sound/JumpKey.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Sound/LeftKey.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Sound/RightKey.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Utils/GlobalVolumeActivator.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -102,6 +105,7 @@
       <workItem from="1738838298221" duration="1655000" />
       <workItem from="1738841749220" duration="33000" />
       <workItem from="1738842765584" duration="6611000" />
+      <workItem from="1742387350032" duration="1978000" />
     </task>
     <servers />
   </component>

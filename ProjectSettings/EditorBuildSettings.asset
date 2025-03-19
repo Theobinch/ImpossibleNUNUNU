@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Game_Over.unity
     guid: 81eb7273142901349a583bc42233e80c
+  - enabled: 1
+    path: Assets/Levels/EndGame.unity
+    guid: f7cab021c5c203f4bbf511bf4a7d8570
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
