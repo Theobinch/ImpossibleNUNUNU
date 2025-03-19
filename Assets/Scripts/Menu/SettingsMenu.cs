@@ -15,15 +15,15 @@ public class SettingsMenu : MonoBehaviour
     //barre de son qui permet de modifier le volume grace a un mixeur present dans l'editeur 
     void Start()
     {
-        float currentVolume;
-        if (audioMixer.GetFloat("MusicVolume", out currentVolume))
-        {
-            musicSlider.value = Mathf.Pow(10, currentVolume / 20);
-        }
+         float savedMusicVolume = PlayerPrefs.GetFloat("MusicVolume", 1f);
+        musicSlider.value = savedMusicVolume;
+        SetMusicVolume(savedMusicVolume);
+
+        bool savedEffectsOn = PlayerPrefs.GetInt("EffectsOn", 1) == 1;
+        effectsToggle.isOn = savedEffectsOn;
+        SetEffectsVolume(savedEffectsOn);
 
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
-
-        effectsToggle.isOn = true;
         effectsToggle.onValueChanged.AddListener(SetEffectsVolume);
     }
 
@@ -32,6 +32,9 @@ public class SettingsMenu : MonoBehaviour
     {
         float dbVolume = Mathf.Log10(Mathf.Clamp(sliderValue, 0.0001f, 1f)) * 20;
         audioMixer.SetFloat("MusicVolume", dbVolume);
+
+        PlayerPrefs.SetFloat("MusicVolume", sliderValue);
+        PlayerPrefs.Save();
     }
 
     //permet d'activer ou non les effets en jeu 
@@ -45,5 +48,8 @@ public class SettingsMenu : MonoBehaviour
         {
             audioMixer.SetFloat("EffectsVolume", 0f);
         }
+
+        PlayerPrefs.SetInt("EffectsOn", isOn ? 1 : 0);
+        PlayerPrefs.Save();
     }
 }
