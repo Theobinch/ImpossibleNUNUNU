@@ -254,8 +254,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: MENU
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3ed6df3bef23e9244825c77699f390eb, type: 2}
-  m_sharedMaterial: {fileID: -1579000646527728625, guid: 3ed6df3bef23e9244825c77699f390eb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 36deb9c7f41dd8540a770a502337c04a, type: 2}
+  m_sharedMaterial: {fileID: -4678867447301119622, guid: 36deb9c7f41dd8540a770a502337c04a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1185,8 +1185,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: RAGEQUIT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3ed6df3bef23e9244825c77699f390eb, type: 2}
-  m_sharedMaterial: {fileID: -1579000646527728625, guid: 3ed6df3bef23e9244825c77699f390eb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 36deb9c7f41dd8540a770a502337c04a, type: 2}
+  m_sharedMaterial: {fileID: -4678867447301119622, guid: 36deb9c7f41dd8540a770a502337c04a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1449,7 +1449,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90a533c20c75cd45bb75c21bcd8c25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeImage: {fileID: 0}
 --- !u!114 &2112937833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1463,7 +1462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.79607844}
+  m_Color: {r: 0.4716981, g: 0.09166961, b: 0.09166961, a: 0.79607844}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
