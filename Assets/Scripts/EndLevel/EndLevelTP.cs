@@ -24,6 +24,6 @@ public class EndLevelTP : MonoBehaviour
     {
         audioSource.Play();
         yield return new WaitForSeconds(audioSource.clip.length);
-        LevelTransition.instance.LoadSceneWithTransition(sceneName);
+        SceneManager.LoadScene(sceneName);
     }
 }
