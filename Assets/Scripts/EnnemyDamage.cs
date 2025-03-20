@@ -69,7 +69,7 @@ public class PlayerCollisions : MonoBehaviour
 
         audioSource.Play();
         
-        if (deathCount % 20 == 0 && audioSource != null && audioClip != null)
+        if (deathCount % 20 == 0)
         {
             audioSource.PlayOneShot(audioClip);
         }
